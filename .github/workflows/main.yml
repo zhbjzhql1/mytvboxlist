@@ -41,27 +41,15 @@ jobs:
 
     - name: Syn upstream  同步上游
       run: |
-        # 启用扩展的模式匹配
-        shopt -s extglob
         # 关闭脚本中的错误终止
         set +e
-        # 从缓存中删除所有文件,不显示任何输出
-        git rm -r --cache * >/dev/null 2>&1 &
-        # 删除除 .github/diy 以外的所有文件夹。find 查找当前目录下的所有文件夹，-maxdepth 0 只搜索当前目录，-type d 只搜索文件夹，! -name ".github/diy" 排除名为 .github/diy 的文件夹。
-        rm -rf `find ./* -maxdepth 0 -type d ! -name "app/src/main/java/com/github/catvod/spider"` >/dev/null 2>&1
-        function git_clone() {
-          # 克隆指定仓库 --depth 1 只克隆最近一次提交 $1 和 $2 是函数的参数，分别表示仓库 URL 和目标目录。
-          git clone --depth 1 $1 $2
-          if [ "$?" != 0 ]; then
-            # 命令执行失败,输出错误信息,获取当前进程的 PID,终止当前进程
-            echo "error on $1"
-            pid="$( ps -q $$ )"
-            kill $pid
-          fi
-        }
-        (
-          curl -X POST -H 'Content-Type: application/json; charset=UTF-8' -d '{"url":"http://www.饭太硬.com/tv"}' https://api.lige.chat/ua > Douban.json
-        )
+
+        rm -f tvboxlist/*.json
+        # 遍历 tvboxlist.txt 文件中的每一行
+        while IFS=, read -r url_name url; do
+          # 使用 curl 执行 POST 请求
+          curl -X POST -H 'Content-Type: application/json; charset=UTF-8' -d "{\"url\":\"$url\"}" https://api.lige.chat/ua > "${url_name}.json"
+        done < tvboxlist.txt
         
     - name: Apply 应用
       run: |
