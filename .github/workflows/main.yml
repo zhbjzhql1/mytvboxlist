@@ -39,13 +39,6 @@ jobs:
         git config --global user.name "github-actions[bot]"
         sudo timedatectl set-timezone "Asia/Shanghai"
 
-    - name: Set up environment variables
-      # 这里可以设置一些环境变量，比如包含链接的数组或文件路径
-      # 但由于 GitHub Actions 不直接支持数组作为环境变量，我们通常使用文件或内联脚本来处理
-      run: |
-        echo "URL='{"url":"http://www.uuneed.cn/yydsys/duoapi/raw/master/jsm.json"}'" >> $GITHUB_ENV
-        echo "Response from $URL"
-
     - name: Syn upstream  同步上游
       run: |
         # 关闭脚本中的错误终止
@@ -53,16 +46,15 @@ jobs:
 
         rm -f tvboxlist/*.json
         # 遍历 tvboxlist.txt 文件中的每一行
-        # while IFS=, read -r url_name url; do
-        #   # 使用 curl 执行 POST 请求
-        #   echo "Response from $url_name: $url"
-        #   curl -X POST -H 'Content-Type: application/json; charset=UTF-8' -d $url https://api.lige.chat/ua > "tvboxlist/${url_name}.json"
-        #   # 添加延时，例如每秒发送一个请求（3秒延时）
-        #   sleep 3
-        # done < tvboxlist/tvboxlist.txt
- 
-        curl -X POST -H 'Content-Type: application/json; charset=UTF-8' -d "$URL" https://api.lige.chat/ua > "tvboxlist/饭太硬.json"
-        echo "curl -X POST -H 'Content-Type: application/json; charset=UTF-8' -d $URL https://api.lige.chat/ua > "tvboxlist/饭太硬.json""
+        while IFS=, read -r url_name url; do
+          # 使用 curl 执行 POST 请求
+          echo "Response from $url_name: $url"
+          json_data=$(printf '{"url":"%s"}' "$url")
+          echo "curl -X POST -H 'Content-Type: application/json; charset=UTF-8' -d '"$json_data"' https://api.lige.chat/ua > "tvboxlist/饭太硬.json""
+          # curl -X POST -H 'Content-Type: application/json; charset=UTF-8' -d $url https://api.lige.chat/ua > "tvboxlist/${url_name}.json"
+          # 添加延时，例如每秒发送一个请求（3秒延时）
+          sleep 3
+        done < tvboxlist/tvboxlist.txt
         
     - name: Apply 应用
       run: |
