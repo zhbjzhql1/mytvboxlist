@@ -49,10 +49,12 @@ jobs:
         while IFS=, read -r url_name url; do
           # 使用 curl 执行 POST 请求
           echo "Response from $url_name: $url"
+          response=$(curl -X POST -H 'Content-Type: application/json; charset=UTF-8' -d "$url" https://api.lige.chat/ua)
+          echo "Response from $response"
           # curl -X POST -H 'Content-Type: application/json; charset=UTF-8' -d "$url" https://api.lige.chat/ua > "tvboxlist/${url_name}.json"
         done < tvboxlist/tvboxlist.txt
 
-        curl -X POST -H 'Content-Type: application/json; charset=UTF-8' -d '{"url":"http://www.饭太硬.com/tv"}' https://api.lige.chat/ua > "tvboxlist/饭太硬.json"
+        # curl -X POST -H 'Content-Type: application/json; charset=UTF-8' -d '{"url":"http://www.饭太硬.com/tv"}' https://api.lige.chat/ua > "tvboxlist/饭太硬.json"
         
     - name: Apply 应用
       run: |
