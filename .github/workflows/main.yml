@@ -43,16 +43,14 @@ jobs:
       run: |
         # 关闭脚本中的错误终止
         set +e
+        set -x  # 开启执行跟踪
 
         rm -f tvboxlist/*.json
         # 遍历 tvboxlist.txt 文件中的每一行
         while IFS=, read -r url_name url; do
           # 使用 curl 执行 POST 请求
-          echo "Response from $url_name: $url"
           json_data=$(printf '{"url":"%s"}' "$url")
-          echo "curl -X POST -H 'Content-Type: application/json; charset=UTF-8' -d '"$json_data"' https://api.lige.chat/ua > "tvboxlist/${url_name}.json""
-          set -x  # 开启执行跟踪
-          curl -X POST -H 'Content-Type: application/json; charset=UTF-8' -d '"$json_data"' https://api.lige.chat/ua > "tvboxlist/${url_name}.json"
+          curl -X POST -H 'Content-Type: application/json; charset=UTF-8' -d "$json_data" https://api.lige.chat/ua > "tvboxlist/${url_name}.json"
           # 添加延时，例如每秒发送一个请求（3秒延时）
           sleep 3
         done < tvboxlist/tvboxlist.txt
