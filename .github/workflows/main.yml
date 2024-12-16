@@ -60,7 +60,7 @@ jobs:
           fi
         }
         (
-          curl -X POST "https://api.lige.chat/ua" -d '{"url":"http://www.饭太硬.com/tv"}' > Douban.json
+          curl -X POST -H 'Content-Type: application/json; charset=UTF-8' -d '{"url":"http://www.饭太硬.com/tv"}' https://api.lige.chat/ua > Douban.json
         )
         
     - name: Apply 应用
