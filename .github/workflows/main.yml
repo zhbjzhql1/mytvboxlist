@@ -30,8 +30,6 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@main
-      with:
-        fetch-depth: 0
     
     - name: Set git identity 设置git标识
       run : |
@@ -41,10 +39,6 @@ jobs:
 
     - name: Syn upstream  同步上游
       run: |
-        # 关闭脚本中的错误终止
-        set +e
-
-        rm -f tvboxlist/*.json
         # 遍历 tvboxlist.txt 文件中的每一行
         while IFS=, read -r url_name url; do
           # 使用 curl 执行 POST 请求
