@@ -47,7 +47,11 @@ jobs:
 
         rm -f tvboxlist/*.json
         # 遍历 tvboxlist.txt 文件中的每一行
-        while IFS=, read -r url_name url; do
+        while IFS=, read -r url_name url && url=$(echo "$url" | tr -d '\r'); do
+          # 去除 url 变量中的回车符（如果有的话）
+          # 注意：这里假设 IFS=, 已经正确地将输入分割成了 url_name 和 url
+          # 但是，如果 url 本身包含逗号，这种方法可能不适用。不过，在您的场景中，
+          # 如果 url 是作为单独的字段读取的，并且逗号仅用作字段分隔符，那么这应该是没问题的。
           # 使用 curl 执行 POST 请求
           json_data=$(printf '{"url":"%s"}' "$url")
           curl -X POST -H 'Content-Type: application/json; charset=UTF-8' -d "$json_data" https://api.lige.chat/ua > "tvboxlist/${url_name}.json"
