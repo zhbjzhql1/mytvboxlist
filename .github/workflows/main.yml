@@ -50,8 +50,8 @@ jobs:
           # 使用 curl 执行 POST 请求
           echo "Response from $url_name: $url"
           json_data=$(printf '{"url":"%s"}' "$url")
-          echo "curl -X POST -H 'Content-Type: application/json; charset=UTF-8' -d '"$json_data"' https://api.lige.chat/ua > "tvboxlist/饭太硬.json""
-          # curl -X POST -H 'Content-Type: application/json; charset=UTF-8' -d $url https://api.lige.chat/ua > "tvboxlist/${url_name}.json"
+          echo "curl -X POST -H 'Content-Type: application/json; charset=UTF-8' -d '"$json_data"' https://api.lige.chat/ua > "tvboxlist/${url_name}.json""
+          curl -X POST -H 'Content-Type: application/json; charset=UTF-8' -d '"$json_data"' https://api.lige.chat/ua > "tvboxlist/${url_name}.json"
           # 添加延时，例如每秒发送一个请求（3秒延时）
           sleep 3
         done < tvboxlist/tvboxlist.txt
