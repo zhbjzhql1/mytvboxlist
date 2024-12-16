@@ -39,6 +39,13 @@ jobs:
         git config --global user.name "github-actions[bot]"
         sudo timedatectl set-timezone "Asia/Shanghai"
 
+    - name: Set up environment variables
+      # 这里可以设置一些环境变量，比如包含链接的数组或文件路径
+      # 但由于 GitHub Actions 不直接支持数组作为环境变量，我们通常使用文件或内联脚本来处理
+      run: |
+        echo "URL='{"url":"http://www.uuneed.cn/yydsys/duoapi/raw/master/jsm.json"}'" >> $GITHUB_ENV
+        echo "Response from $URL"
+
     - name: Syn upstream  同步上游
       run: |
         # 关闭脚本中的错误终止
@@ -53,8 +60,7 @@ jobs:
         #   # 添加延时，例如每秒发送一个请求（3秒延时）
         #   sleep 3
         # done < tvboxlist/tvboxlist.txt
-
-        echo "URL='{"url":"http://www.uuneed.cn/yydsys/duoapi/raw/master/jsm.json"}'" >> $GITHUB_ENV
+ 
         curl -X POST -H 'Content-Type: application/json; charset=UTF-8' -d $URL https://api.lige.chat/ua > "tvboxlist/饭太硬.json"
         
     - name: Apply 应用
