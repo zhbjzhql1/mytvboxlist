@@ -46,15 +46,16 @@ jobs:
 
         rm -f tvboxlist/*.json
         # 遍历 tvboxlist.txt 文件中的每一行
-        while IFS=, read -r url_name url; do
-          # 使用 curl 执行 POST 请求
-          echo "Response from $url_name: $url"
-          curl -X POST -H 'Content-Type: application/json; charset=UTF-8' -d $url https://api.lige.chat/ua > "tvboxlist/${url_name}.json"
-          # 添加延时，例如每秒发送一个请求（3秒延时）
-          sleep 3
-        done < tvboxlist/tvboxlist.txt
+        # while IFS=, read -r url_name url; do
+        #   # 使用 curl 执行 POST 请求
+        #   echo "Response from $url_name: $url"
+        #   curl -X POST -H 'Content-Type: application/json; charset=UTF-8' -d $url https://api.lige.chat/ua > "tvboxlist/${url_name}.json"
+        #   # 添加延时，例如每秒发送一个请求（3秒延时）
+        #   sleep 3
+        # done < tvboxlist/tvboxlist.txt
 
-        # curl -X POST -H 'Content-Type: application/json; charset=UTF-8' -d '{"url":"http://www.饭太硬.com/tv"}' https://api.lige.chat/ua > "tvboxlist/饭太硬.json"
+        echo "URL='{"url":"http://www.uuneed.cn/yydsys/duoapi/raw/master/jsm.json"}'" >> $GITHUB_ENV
+        curl -X POST -H 'Content-Type: application/json; charset=UTF-8' -d $URL https://api.lige.chat/ua > "tvboxlist/饭太硬.json"
         
     - name: Apply 应用
       run: |
