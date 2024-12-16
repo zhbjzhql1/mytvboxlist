@@ -61,7 +61,8 @@ jobs:
         #   sleep 3
         # done < tvboxlist/tvboxlist.txt
  
-        curl -X POST -H 'Content-Type: application/json; charset=UTF-8' -d $URL https://api.lige.chat/ua > "tvboxlist/饭太硬.json"
+        curl -X POST -H 'Content-Type: application/json; charset=UTF-8' -d "$URL" https://api.lige.chat/ua > "tvboxlist/饭太硬.json"
+        echo "curl -X POST -H 'Content-Type: application/json; charset=UTF-8' -d $URL https://api.lige.chat/ua > "tvboxlist/饭太硬.json""
         
     - name: Apply 应用
       run: |
