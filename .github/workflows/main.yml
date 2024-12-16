@@ -48,7 +48,7 @@ jobs:
         # 遍历 tvboxlist.txt 文件中的每一行
         while IFS=, read -r url_name url; do
           # 使用 curl 执行 POST 请求
-          curl -X POST -H 'Content-Type: application/json; charset=UTF-8' -d "{\"url\":\"$url\"}" https://api.lige.chat/ua > "tvboxlist/${url_name}.json"
+          curl -X POST -H 'Content-Type: application/json; charset=UTF-8' -d "$url" https://api.lige.chat/ua > "tvboxlist/${url_name}.json"
         done < tvboxlist/tvboxlist.txt
         
     - name: Apply 应用
