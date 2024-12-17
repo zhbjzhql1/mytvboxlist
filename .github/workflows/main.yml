@@ -54,7 +54,21 @@ jobs:
           # 如果 url 是作为单独的字段读取的，并且逗号仅用作字段分隔符，那么这应该是没问题的。
           # 使用 curl 执行 POST 请求
           json_data=$(printf '{"url":"%s"}' "$url")
-          curl -X POST -H 'Content-Type: application/json; charset=UTF-8' -d "$json_data" https://api.lige.chat/ua > "tvboxlist/${url_name}.json"
+          # curl -X POST -H 'Content-Type: application/json; charset=UTF-8' -d "$json_data" https://api.lige.chat/ua > "tvboxlist/${url_name}.json"
+          response=$(curl -s -X POST -H 'Content-Type: application/json; charset=UTF-8' -d "$json_data" https://api.lige.chat/ua 2>&1)
+          # 检查输出是否包含 "sites":
+          if [[ ! "$response" == *"\"sites\":"* ]]; then
+            # 在这里执行新的 curl 命令或其他操作
+            # 例如，再次发送请求到一个不同的端点或记录错误
+            new_response=$(curl -L https://www.xn--sss604efuw.com/jm/jiemi.php?url="$url")
+            if [[ ! "$new_response" == *"\"sites\":"* ]]; then
+              echo "${url_name} error"
+            else
+              echo "$new_response" > "tvboxlist/${url_name}.json"
+          else
+            # 如果包含 "sites":，则处理正常响应（例如保存到文件）
+            echo "$response" > "tvboxlist/${url_name}.json"
+          fi
           # 添加延时，例如每秒发送一个请求（3秒延时）
           sleep 3
         done < tvboxlist/tvboxlist.txt
