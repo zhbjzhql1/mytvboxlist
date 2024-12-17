@@ -65,6 +65,7 @@ jobs:
               echo "${url_name} error"
             else
               echo "$new_response" > "tvboxlist/${url_name}.json"
+            fi
           else
             # 如果包含 "sites":，则处理正常响应（例如保存到文件）
             echo "$response" > "tvboxlist/${url_name}.json"
