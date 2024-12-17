@@ -1,0 +1,57 @@
+name: Merge JSON Files
+
+on:
+  push:
+    branches:
+      - main  # 或者你想要监听的分支名称
+
+jobs:
+  merge-json:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        # 如果你的脚本依赖其他Python包，可以在这里添加安装命令
+        # 例如：pip install some-package
+
+    - name: Merge JSON files
+      run: |
+        # 假设你有一个名为merge_json.py的脚本在仓库的根目录下
+        python ./merge_json.py /tvboxlist /file.json --no-overwrite
+      env:
+        # 如果你的脚本需要环境变量，可以在这里添加
+        # 例如：MY_ENV_VAR: ${{ secrets.MY_SECRET }}
+
+    - name: Commit and push the merged JSON file
+      run: |
+        git config --local user.name 'github-actions'
+        git config --local user.email 'github-actions@github.com'
+        
+        # 假设合并后的JSON文件名为merged.json，并且位于仓库的根目录下
+        git add merged.json
+        
+        # 提交更改，并添加提交信息
+        git commit -m 'Automatically merged JSON files'
+        
+        # 推送更改到远程仓库
+        git push
+
+    # 可选：如果你只想在合并成功时才推送更改，可以添加一个判断步骤
+    # - name: Check if merge was successful
+    #   if: success()  # 或者使用其他条件，比如某个特定步骤的成功
+    #   run: echo "Merge was successful!"
+
+# 注意：
+# 1. 确保你的merge_json.py脚本能够正确合并JSON文件，并将其输出为merged.json（或你指定的其他文件名）。
+# 2. 确保你的GitHub仓库有写权限，以便Action可以提交和推送更改。
+# 3. 如果你不想在每次推送时都触发这个Action，可以调整on事件的条件，比如只在特定的路径或文件更改时触发。
