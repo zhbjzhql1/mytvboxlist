@@ -1,9 +1,7 @@
 name: Merge JSON Files
 
 on:
-  push:
-    branches:
-      - main  # 或者你想要监听的分支名称
+  workflow_dispatch:
 
 jobs:
   merge-json:
@@ -27,10 +25,7 @@ jobs:
     - name: Merge JSON files
       run: |
         # 假设你有一个名为merge_json.py的脚本在仓库的根目录下
-        python ./merge_json.py /tvboxlist /file.json --no-overwrite
-      env:
-        # 如果你的脚本需要环境变量，可以在这里添加
-        # 例如：MY_ENV_VAR: ${{ secrets.MY_SECRET }}
+        python ./merge_json.py tvboxlist merged.json
 
     - name: Commit and push the merged JSON file
       run: |
