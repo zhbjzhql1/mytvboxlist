@@ -97,7 +97,7 @@ def merge_json_files(input_dir, output_file):
 
     # 写入CSV文件
     csv_filename = 'sites.csv'
-    with open(csv_filename, mode='w', newline='', encoding='utf-8') as csvfile:
+    with open(csv_filename, mode='w', newline='', encoding='ANSI') as csvfile:
         # 写入头部
         writer = csv.writer(csvfile)
         writer.writerow(all_keys)
@@ -119,7 +119,7 @@ def merge_json_files(input_dir, output_file):
 
     # 写入CSV文件
     csv_filename = 'lives.csv'
-    with open(csv_filename, mode='w', newline='', encoding='utf-8') as csvfile:
+    with open(csv_filename, mode='w', newline='', encoding='ANSI') as csvfile:
         # 写入头部
         writer = csv.writer(csvfile)
         writer.writerow(all_keys)
@@ -141,7 +141,7 @@ def merge_json_files(input_dir, output_file):
 
     # 写入CSV文件
     csv_filename = 'parses.csv'
-    with open(csv_filename, mode='w', newline='', encoding='utf-8') as csvfile:
+    with open(csv_filename, mode='w', newline='', encoding='ANSI') as csvfile:
         # 写入头部
         writer = csv.writer(csvfile)
         writer.writerow(all_keys)
