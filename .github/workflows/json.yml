@@ -37,6 +37,9 @@ jobs:
         
         # 假设合并后的JSON文件名为merged.json，并且位于仓库的根目录下
         git add merged.json
+        git add lives.csv
+        git add parses.csv
+        git add sites.csv
         
         # 提交更改，并添加提交信息
         git commit -m 'Automatically merged JSON files'
