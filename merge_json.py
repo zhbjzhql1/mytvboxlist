@@ -1,6 +1,7 @@
 import json
 import os
 import argparse
+import demjson  # 导入 demjson 库
 
 def merge_json_files(input_dir, output_file):
     merged_data = {}
@@ -17,8 +18,10 @@ def merge_json_files(input_dir, output_file):
             # 读取JSON文件
             try:
                 with open(file_path, 'r', encoding='utf-8') as f:
-                    data = json.load(f)
-            except json.JSONDecodeError as e:
+            #         data = json.load(f)
+            # except json.JSONDecodeError as e:
+                    data = demjson.decode(f.read(), strict=False)  # strict=False 允许非标准 JSON
+            except demjson.JSONDecodeError as e:
                 print(f"Error decoding JSON file {file_path}: {e}")
                 continue  # 跳过无法解码的文件
             except Exception as e:
@@ -45,18 +48,26 @@ def merge_json_files(input_dir, output_file):
             parses_data_temp = data.get('parses')
             ads_data_temp = data.get('ads')
 
-            for element in sites_data_temp:
-                if element not in sites_data:
-                    sites_data.append(element)
-            for element in lives_data_temp:
-                if element not in lives_data:
-                    lives_data.append(element)
-            for element in parses_data_temp:
-                if element not in parses_data:
-                    parses_data.append(element)
-            for element in ads_data_temp:
-                if element not in ads_data:
-                    ads_data.append(element)
+            # 检查并合并 sites_data
+            if sites_data_temp is not None:
+                for element in sites_data_temp:
+                    if element not in sites_data:
+                        sites_data.append(element)
+            # 检查并合并 lives_data
+            if lives_data_temp is not None:
+                for element in lives_data_temp:
+                    if element not in lives_data:
+                        lives_data.append(element)
+            # 检查并合并 parses_data
+            if parses_data_temp is not None:
+                for element in parses_data_temp:
+                    if element not in parses_data:
+                        parses_data.append(element)
+            # 检查并合并 ads_data
+            if ads_data_temp is not None:
+                for element in ads_data_temp:
+                    if element not in ads_data:
+                        ads_data.append(element)
 
     merged_data['sites'] = sites_data
     merged_data['lives'] = lives_data

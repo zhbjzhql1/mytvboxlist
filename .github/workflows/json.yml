@@ -21,6 +21,7 @@ jobs:
         python -m pip install --upgrade pip
         # 如果你的脚本依赖其他Python包，可以在这里添加安装命令
         # 例如：pip install some-package
+        pip install demjson
 
     - name: Merge JSON files
       run: |
