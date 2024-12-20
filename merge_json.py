@@ -2,6 +2,7 @@ import json
 import os
 import argparse
 import demjson3  # 导入 demjson3 库
+import csv
 
 def merge_json_files(input_dir, output_file):
     merged_data = {}
@@ -84,6 +85,73 @@ def merge_json_files(input_dir, output_file):
         exit(1)
 
     print(f"Merged JSON files successfully and saved to {output_file}")
+
+
+    # 找到所有可能的key
+    all_keys = set()
+    for item in merged_data['sites']:
+        all_keys.update(item.keys())
+
+    # 转换为列表并排序（可选）
+    all_keys = sorted(all_keys)
+
+    # 写入CSV文件
+    csv_filename = 'sites.csv'
+    with open(csv_filename, mode='w', newline='', encoding='utf-8') as csvfile:
+        # 写入头部
+        writer = csv.writer(csvfile)
+        writer.writerow(all_keys)
+        
+        # 写入内容
+        for item in merged_data['sites']:
+            row = [item.get(key, '') for key in all_keys]
+            writer.writerow(row)
+
+    print(f"CSV文件已生成：{csv_filename}")
+
+    # 找到所有可能的key
+    all_keys = set()
+    for item in merged_data['lives']:
+        all_keys.update(item.keys())
+
+    # 转换为列表并排序（可选）
+    all_keys = sorted(all_keys)
+
+    # 写入CSV文件
+    csv_filename = 'lives.csv'
+    with open(csv_filename, mode='w', newline='', encoding='utf-8') as csvfile:
+        # 写入头部
+        writer = csv.writer(csvfile)
+        writer.writerow(all_keys)
+        
+        # 写入内容
+        for item in merged_data['lives']:
+            row = [item.get(key, '') for key in all_keys]
+            writer.writerow(row)
+
+    print(f"CSV文件已生成：{csv_filename}")
+
+    # 找到所有可能的key
+    all_keys = set()
+    for item in merged_data['parses']:
+        all_keys.update(item.keys())
+
+    # 转换为列表并排序（可选）
+    all_keys = sorted(all_keys)
+
+    # 写入CSV文件
+    csv_filename = 'parses.csv'
+    with open(csv_filename, mode='w', newline='', encoding='utf-8') as csvfile:
+        # 写入头部
+        writer = csv.writer(csvfile)
+        writer.writerow(all_keys)
+        
+        # 写入内容
+        for item in merged_data['parses']:
+            row = [item.get(key, '') for key in all_keys]
+            writer.writerow(row)
+
+    print(f"CSV文件已生成：{csv_filename}")
 
 if __name__ == "__main__":
     # 解析命令行参数
