@@ -1,7 +1,7 @@
 import json
 import os
 import argparse
-import demjson  # 导入 demjson 库
+import demjson3  # 导入 demjson3 库
 
 def merge_json_files(input_dir, output_file):
     merged_data = {}
@@ -20,8 +20,8 @@ def merge_json_files(input_dir, output_file):
                 with open(file_path, 'r', encoding='utf-8') as f:
             #         data = json.load(f)
             # except json.JSONDecodeError as e:
-                    data = demjson.decode(f.read(), strict=False)  # strict=False 允许非标准 JSON
-            except demjson.JSONDecodeError as e:
+                    data = demjson3.decode(f.read(), strict=False)  # strict=False 允许非标准 JSON
+            except demjson3.JSONDecodeError as e:
                 print(f"Error decoding JSON file {file_path}: {e}")
                 continue  # 跳过无法解码的文件
             except Exception as e:
