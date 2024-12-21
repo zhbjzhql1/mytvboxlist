@@ -57,8 +57,13 @@ def merge_json_files(input_dir, output_file):
             # 检查并合并 lives_data
             if lives_data_temp is not None:
                 for element in lives_data_temp:
-                    if element not in lives_data:
-                        lives_data.append(element)
+                    if element.get('channels') is not None:
+                        for element2 in element.get('channels'):
+                            if element2 not in lives_data:
+                                lives_data.append(element2)
+                    else:
+                        if element not in lives_data:
+                                lives_data.append(element)
             # 检查并合并 parses_data
             if parses_data_temp is not None:
                 for element in parses_data_temp:
@@ -90,21 +95,24 @@ def merge_json_files(input_dir, output_file):
     # 找到所有可能的key
     all_keys = set()
     for item in merged_data['sites']:
-        all_keys.update(item.keys())
+        all_keys.update(key.lower() for key in item.keys())  # 使用生成器表达式将key转换为小写
 
     # 转换为列表并排序（可选）
     all_keys = sorted(all_keys)
 
     # 写入CSV文件
     csv_filename = 'sites.csv'
-    with open(csv_filename, mode='w', newline='', encoding='ANSI') as csvfile:
+    with open(csv_filename, mode='w', newline='', encoding='utf-8') as csvfile:
         # 写入头部
         writer = csv.writer(csvfile)
         writer.writerow(all_keys)
         
         # 写入内容
         for item in merged_data['sites']:
-            row = [item.get(key, '') for key in all_keys]
+            # 创建一个新字典，键为小写形式，值为原字典中对应键的值（若不存在则为空字符串）
+            lowercase_item = {key.lower(): item.get(key, '') for key in item.keys()}
+            # 根据all_keys的顺序获取值，如果键不存在则使用空字符串
+            row = [lowercase_item.get(key, '') for key in all_keys]
             writer.writerow(row)
 
     print(f"CSV文件已生成：{csv_filename}")
@@ -112,21 +120,24 @@ def merge_json_files(input_dir, output_file):
     # 找到所有可能的key
     all_keys = set()
     for item in merged_data['lives']:
-        all_keys.update(item.keys())
+        all_keys.update(key.lower() for key in item.keys())  # 使用生成器表达式将key转换为小写
 
     # 转换为列表并排序（可选）
     all_keys = sorted(all_keys)
 
     # 写入CSV文件
     csv_filename = 'lives.csv'
-    with open(csv_filename, mode='w', newline='', encoding='ANSI') as csvfile:
+    with open(csv_filename, mode='w', newline='', encoding='utf-8') as csvfile:
         # 写入头部
         writer = csv.writer(csvfile)
         writer.writerow(all_keys)
         
         # 写入内容
         for item in merged_data['lives']:
-            row = [item.get(key, '') for key in all_keys]
+            # 创建一个新字典，键为小写形式，值为原字典中对应键的值（若不存在则为空字符串）
+            lowercase_item = {key.lower(): item.get(key, '') for key in item.keys()}
+            # 根据all_keys的顺序获取值，如果键不存在则使用空字符串
+            row = [lowercase_item.get(key, '') for key in all_keys]
             writer.writerow(row)
 
     print(f"CSV文件已生成：{csv_filename}")
@@ -134,21 +145,24 @@ def merge_json_files(input_dir, output_file):
     # 找到所有可能的key
     all_keys = set()
     for item in merged_data['parses']:
-        all_keys.update(item.keys())
+        all_keys.update(key.lower() for key in item.keys())  # 使用生成器表达式将key转换为小写
 
     # 转换为列表并排序（可选）
     all_keys = sorted(all_keys)
 
     # 写入CSV文件
     csv_filename = 'parses.csv'
-    with open(csv_filename, mode='w', newline='', encoding='ANSI') as csvfile:
+    with open(csv_filename, mode='w', newline='', encoding='utf-8') as csvfile:
         # 写入头部
         writer = csv.writer(csvfile)
         writer.writerow(all_keys)
         
         # 写入内容
         for item in merged_data['parses']:
-            row = [item.get(key, '') for key in all_keys]
+            # 创建一个新字典，键为小写形式，值为原字典中对应键的值（若不存在则为空字符串）
+            lowercase_item = {key.lower(): item.get(key, '') for key in item.keys()}
+            # 根据all_keys的顺序获取值，如果键不存在则使用空字符串
+            row = [lowercase_item.get(key, '') for key in all_keys]
             writer.writerow(row)
 
     print(f"CSV文件已生成：{csv_filename}")
