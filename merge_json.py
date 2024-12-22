@@ -98,7 +98,7 @@ def merge_json_files(input_dir, output_file):
         all_keys.update(key.lower() for key in item.keys())  # 使用生成器表达式将key转换为小写
 
     # 转换为列表并排序（可选）
-    all_keys = sorted(all_keys)
+    # all_keys = sorted(all_keys)
 
     # 写入CSV文件
     csv_filename = 'sites.csv'
@@ -123,7 +123,7 @@ def merge_json_files(input_dir, output_file):
         all_keys.update(key.lower() for key in item.keys())  # 使用生成器表达式将key转换为小写
 
     # 转换为列表并排序（可选）
-    all_keys = sorted(all_keys)
+    # all_keys = sorted(all_keys)
 
     # 写入CSV文件
     csv_filename = 'lives.csv'
@@ -148,7 +148,7 @@ def merge_json_files(input_dir, output_file):
         all_keys.update(key.lower() for key in item.keys())  # 使用生成器表达式将key转换为小写
 
     # 转换为列表并排序（可选）
-    all_keys = sorted(all_keys)
+    # all_keys = sorted(all_keys)
 
     # 写入CSV文件
     csv_filename = 'parses.csv'
