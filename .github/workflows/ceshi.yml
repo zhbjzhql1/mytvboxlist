@@ -46,7 +46,8 @@ jobs:
         rm -f .github/workflows/iptv/iptv.txt
         # 遍历 iptvlist.txt 文件中的每一行
         while IFS= read -r url && url=$(echo "$url" | tr -d '\r'); do
-          curl -s "$url" > tvboxlist/iptv.txt
+          new_response=$(curl -L "$url")
+          echo "$new_response" > tvboxlist/iptv.txt
           echo > tvboxlist/iptv.txt
           # 添加延时，例如每秒发送一个请求（3秒延时）
           sleep 3
