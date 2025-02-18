@@ -53,6 +53,10 @@ jobs:
           sleep 3
         done < .github/workflows/iptv/iptvlist.txt
         awk '
+        BEGIN {
+            # 设置字段分隔符为空格或逗号
+            FS="[,]";
+        }
         {
             # 初始化变量
             tvg_name = ""; url = "";
