@@ -52,6 +52,33 @@ jobs:
           # 添加延时，例如每秒发送一个请求（3秒延时）
           sleep 3
         done < .github/workflows/iptv/iptvlist.txt
+        awk '
+        {
+            # 初始化变量
+            tvg_name = ""; url = "";
+
+            # 匹配 tvg-name="xxxx"
+            if (match($0, /tvg-name="([^"]*)"/, arr)) {
+                tvg_name = arr[1];
+            }
+
+            # 匹配不包含 .png 的 URL
+            for (i = 1; i <= NF; i++) {
+                if ($i ~ /^https?:\/\/[^ ]+/ && $i !~ /\.png/) {
+                    url = $i;
+                    break;
+                }
+            }
+
+            # 如果找到 tvg-name 和 URL，则替换整行为 "tvg_name,url"
+            if (tvg_name != "" && url != "") {
+                print tvg_name "," url;
+            } else {
+                # 如果不符合条件，保留原行
+                print $0;
+            }
+        }
+        ' tvboxlist/iptv.txt > tvboxlist/iptvoutput.txt
         
     - name: Apply 应用
       run: |
