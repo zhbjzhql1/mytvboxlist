@@ -83,6 +83,23 @@ jobs:
             }
         }
         ' tvboxlist/iptv.txt > tvboxlist/iptvoutput.txt
+        perl -pe '
+            s/(?i)\QCCTV-\E//g;
+            s/(?i)\Q「购物」\E//g;
+            s/(?i)\Q「IPV6」\E//g;
+            s/(?i)CETV早期教育/早期教育/g;
+            s/(?i)(newtv)/\U$1/g;
+            s/(?i)\QNEWTV \E/NEWTV/g;
+            s/(?i)\QNEWTV-\E/NEWTV/g;
+            s/(?i)\Q (1080p)\E//g;
+            s/(?i)\Q[ipv6]\E//g;
+            s/(?i)\Q-高清\E//g;
+            s/(?i)\Q(NO EPG)\E//g;
+            s/(?i)\Q黑龙江|\E//g;
+            s/(?i)\高清//g;
+            s/(?i)\Q中央新影-\E//g;
+            s/(?i)中央新影//g;
+        ' tvboxlist/iptvoutput.txt > tvboxlist/iptvcsoutput.txt
         
     - name: Apply 应用
       run: |
