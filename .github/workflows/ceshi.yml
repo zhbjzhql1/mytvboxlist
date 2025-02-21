@@ -90,22 +90,13 @@ jobs:
             $rest = $2;             # 获取逗号后的部分
 
             # 对逗号前的部分进行替换操作
-            $first_part =~ s/(?i)\QCCTV-\E//g;
-            $first_part =~ s/(?i)CCTV//g;
-            $first_part =~ s/(?i)\Q「购物」\E//g;
-            $first_part =~ s/(?i)\Q「IPV6」\E//g;
+            $first_part =~ s/(?i)\((.*?)\)|\[(.*?)\]|「(.*?)」| |CCTV-|CCTV|-高清|高清|黑龙江\||中央新影-|中央新影|河南｜|HEVC|标清|湖南-//g;
             $first_part =~ s/(?i)CETV早期教育/早期教育/g;
             $first_part =~ s/(?i)(newtv)/\U$1/g;
             $first_part =~ s/(?i)\QNEWTV \E/NEWTV/g;
             $first_part =~ s/(?i)\QNEWTV-\E/NEWTV/g;
-            $first_part =~ s/(?i)\Q (1080p)\E//g;
-            $first_part =~ s/(?i)\Q[ipv6]\E//g;
-            $first_part =~ s/(?i)\Q-高清\E//g;
-            $first_part =~ s/(?i)\Q(NO EPG)\E//g;
-            $first_part =~ s/(?i)\Q黑龙江|\E//g;
-            $first_part =~ s/(?i)\高清//g;
-            $first_part =~ s/(?i)\Q中央新影-\E//g;
-            $first_part =~ s/(?i)中央新影//g;
+            $first_part =~ s/(?i)\Q河南晴彩中原\E/晴彩中原/g;
+            $first_part =~ s/(?i)\Q河南睛彩中原\E/晴彩中原/g;
 
             # 将处理后的第一部分和第二部分重新组合
             $_ = $first_part . $rest . "\n";  # 显式添加换行符
