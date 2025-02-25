@@ -3851,7 +3851,7 @@ CETV3,http://39.134.134.43/000000002001/PLTV/88888888/224/3221285003/index.m3u8?
 426河南,http://tvpull.dxhmt.cn:9081/tv/11425-1.m3u8
 梨园,http://live.dxhmt.cn:9080/19903718786/3159ec673c114135816d45dd52ad7396.m3u8
 河南开封新闻综合,https://stream1.freetv.fun/he-nan-kai-feng-xin-wen-zong-he-1.m3u8
-河南衛視,https://stream1.freetv.fun/he-nan-wei-shi-59.m3u8
+衛河南視,https://stream1.freetv.fun/he-nan-wei-shi-59.m3u8
 河南衛視,https://stream1.freetv.fun/he-nan-wei-shi-77.m3u8
 河南衛視,https://stream1.freetv.fun/he-nan-wei-shi-76.m3u8
 河南安阳音乐,https://ls.qingting.fm/live/20209339/64k.m3u8

@@ -82,7 +82,7 @@ jobs:
                 print $0;
             }
         }
-        ' tvboxlist/iptv.txt > tvboxlist/iptvoutput.txt
+        ' tvboxlist/iptv.txt > tvboxlist/iptvFormatOutput.txt
         perl -pe '
             chomp;  # 去掉行尾的换行符
             s/^([^,]*)(,.*)/$1$2/;  # 将行分为两部分：逗号前和逗号后
@@ -90,17 +90,50 @@ jobs:
             $rest = $2;             # 获取逗号后的部分
 
             # 对逗号前的部分进行替换操作
-            $first_part =~ s/(?i)\((.*?)\)|\[(.*?)\]|「(.*?)」| |CCTV-|CCTV|-高清|高清|黑龙江\||中央新影-|中央新影|河南｜|HEVC|标清|湖南-//g;
+            $first_part =~ s/(?i)\((.*?)\)|\[(.*?)\]|「(.*?)」| |	|CCTV-|CCTV|-高清|高清|黑龙江\||中央新影-|中央新影|河南\||河南｜|HEVC|标清|湖南-//g;
             $first_part =~ s/(?i)CETV早期教育/早期教育/g;
             $first_part =~ s/(?i)(newtv)/\U$1/g;
             $first_part =~ s/(?i)\QNEWTV \E/NEWTV/g;
             $first_part =~ s/(?i)\QNEWTV-\E/NEWTV/g;
             $first_part =~ s/(?i)\Q河南晴彩中原\E/晴彩中原/g;
             $first_part =~ s/(?i)\Q河南睛彩中原\E/晴彩中原/g;
+            $first_part =~ s/(?i)\QNEWTV哒啵赛事\E/哒啵赛事/g;
+            $first_part =~ s/(?i)\QNEWTV哒啵电竞\E/哒啵电竞/g;
+            $first_part =~ s/(?i)\QNEWTV央广购物\E/央广购物/g;
+            $first_part =~ s/(?i)\QNEWTV中视购物\E/中视购物/g;
+            $first_part =~ s/(?i)\QNEWTV优购物\E/优购物/g;
+            $first_part =~ s/(?i)\QNEWTV睛彩竞技\E/睛彩竞技/g;
+            $first_part =~ s/(?i)\QNEWTV精彩影视\E/精彩影视/g;
+            $first_part =~ s/(?i)\QNEWTV睛彩青少\E/睛彩青少/g;
+            $first_part =~ s/(?i)\Q河南衛視\E/河南卫视/g;
+            $first_part =~ s/(?i)\QNEWTV武搏世界\E/NEWTV武博世界/g;
+            $first_part =~ s/(?i)\Q周口扶沟\E/扶沟综合/g;
+            $first_part =~ s/(?i)\Q河南衛視\E/河南卫视/g;
 
             # 将处理后的第一部分和第二部分重新组合
             $_ = $first_part . $rest . "\n";  # 显式添加换行符
-        ' tvboxlist/iptvoutput.txt > tvboxlist/iptvcsoutput.txt
+        ' tvboxlist/iptvFormatOutput.txt > tvboxlist/iptvTempOutput.txt
+
+        # 临时文件用于存储去重后的内容
+        temp_file=$(mktemp)
+
+        # 使用关联数组来记录第一部分数据是否已经出现过
+        declare -A seen
+
+        # 逐行读取输入文件
+        while IFS= read -r line; do
+            # 提取分隔符 $ 之前的部分
+            first_part="${line%%\$*}"
+            if [[ -z ${seen[$first_part]} ]]; then
+                # 如果第一部分数据还未出现过，则将整行写入临时文件
+                echo "$line" >> "$temp_file"
+                # 标记第一部分数据已经出现过
+                seen[$first_part]=1
+            fi
+        done < "tvboxlist/iptvTempOutput.txt"
+
+        # 将临时文件的内容覆盖回输入文件
+        mv "$temp_file" "tvboxlist/iptvDeduplicationOutput.txt"
         
     - name: Apply 应用
       run: |
