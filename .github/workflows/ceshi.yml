@@ -114,26 +114,7 @@ jobs:
             $_ = $first_part . $rest . "\n";  # 显式添加换行符
         ' tvboxlist/iptvFormatOutput.txt > tvboxlist/iptvTempOutput.txt
 
-        # 临时文件用于存储去重后的内容
-        temp_file=$(mktemp)
-
-        # 使用关联数组来记录第一部分数据是否已经出现过
-        declare -A seen
-
-        # 逐行读取输入文件
-        while IFS= read -r line; do
-            # 提取分隔符 $ 之前的部分
-            first_part="${line%%\$*}"
-            if [[ -z ${seen[$first_part]} ]]; then
-                # 如果第一部分数据还未出现过，则将整行写入临时文件
-                echo "$line" >> "$temp_file"
-                # 标记第一部分数据已经出现过
-                seen[$first_part]=1
-            fi
-        done < "tvboxlist/iptvTempOutput.txt"
-
-        # 将临时文件的内容覆盖回输入文件
-        mv "$temp_file" "tvboxlist/iptvDeduplicationOutput.txt"
+        awk -F'$' '!seen[$1]++' "tvboxlist/iptvTempOutput.txt" > "tvboxlist/iptvDeduplicationOutput.txt"
         
     - name: Apply 应用
       run: |
