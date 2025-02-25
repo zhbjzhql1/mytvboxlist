@@ -640,7 +640,7 @@ NewTV-精品大剧,http://182.148.179.69:35455/itv/1000000004000013968.m3u8?cdn=
 NewTV-精品体育,http://m.951688.xyz:35455/itv/1000000004000014634.m3u8?cdn=ystenlive
 NewTV-精品体育,http://182.149.204.53:35455/itv/1000000004000014634.m3u8?cdn=ystenlive
 NewTV-精品体育,http://182.148.179.69:35455/itv/1000000004000014634.m3u8?cdn=ystenlive
-tvg-id="newtv家庭剧场" tvg-name="newtv家庭剧场" tvg-logo="https://epg.v1.mk/logo/newtv家庭剧场.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/1000000004000008284.m3u8?cdn=ystenlive
+newtv家庭剧场,http://t8622699o8.vicp.fun:60024/itv/1000000004000008284.m3u8?cdn=ystenlive
 NewTV-古装剧场,http://117.144.58.42:35455/itv/2000000003000000024.m3u8?cdn=hnbblive
 NewTV-精品体育,http://171.88.65.61:35455/itv/1000000004000014634.m3u8?cdn=ystenlive
 NewTV-精品体育,http://118.24.87.34:35455/itv/1000000004000014634.m3u8?cdn=ystenlive
@@ -693,33 +693,33 @@ NewTV优购物,http://39.134.65.106/PLTV/88888888/224/3221225894/1.m3u8
 NewTV精品纪录,http://39.134.68.140:6610/PLTV/88888888/224/3221225672/index.m3u8?
 NewTV精品纪录,http://39.134.65.74:80/wh7f454c46tw696975095_577841645/ottrrs.hl.chinamobile.com/pltv/88888888/224/3221225672/index.m3u8
 NewTV精品纪录,http://39.134.68.175:6610/PLTV/88888888/224/3221225672/index.m3u8?
-tvg-id="NewTV精品综合" tvg-name="NewTV精品综合" tvg-logo="https://epg.v1.mk/logo/NewTV精品综合.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/1000000004000019008.m3u8?cdn=ystenlive
-tvg-id="NEWTV精品萌宠" tvg-name="NEWTV精品萌宠" tvg-logo="https://epg.v1.mk/logo/NEWTV精品萌宠.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/1000000006000032328.m3u8?cdn=ystenlive
-tvg-id="newtv精品纪录" tvg-name="newtv精品纪录" tvg-logo="https://epg.v1.mk/logo/newtv精品纪录.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/1000000004000013730.m3u8?cdn=ystenlive
-tvg-id="newtv精品大剧" tvg-name="newtv精品大剧" tvg-logo="https://epg.v1.mk/logo/newtv精品大剧.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/1000000004000013968.m3u8?cdn=ystenlive
-tvg-id="newtv爱情喜剧" tvg-name="newtv爱情喜剧" tvg-logo="https://epg.v1.mk/logo/newtv爱情喜剧.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/2000000003000000010.m3u8?cdn=hnbblive
-tvg-id="NewTV金牌综艺" tvg-name="NewTV金牌综艺" tvg-logo="https://epg.v1.mk/logo/NewTV金牌综艺.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/1000000004000026167.m3u8?cdn=ystenlive
-tvg-id="NEWTV武博世界" tvg-name="NEWTV武博世界" tvg-logo="https://epg.v1.mk/logo/NEWTV武博世界.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/2000000003000000007.m3u8?cdn=hnbblive
-tvg-id="newtv潮妈辣婆" tvg-name="newtv潮妈辣婆" tvg-logo="https://epg.v1.mk/logo/newtv潮妈辣婆.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/2000000003000000018.m3u8?cdn=hnbblive
-tvg-id="newtv军事评论" tvg-name="newtv军事评论" tvg-logo="https://epg.v1.mk/logo/newtv军事评论.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/2000000003000000022.m3u8?cdn=hnbblive
-tvg-id="NewTV明星大片" tvg-name="NewTV明星大片" tvg-logo="https://epg.v1.mk/logo/NewTV明星大片.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/2000000003000000016.m3u8?cdn=hnbblive
-tvg-id="newtv农业致富" tvg-name="newtv农业致富" tvg-logo="https://epg.v1.mk/logo/newtv农业致富.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/2000000003000000003.m3u8?cdn=hnbblive
-tvg-id="NEWTV哒啵电竞" tvg-name="NEWTV哒啵电竞" tvg-logo="https://epg.v1.mk/logo/哒啵电竞.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/1000000006000032327.m3u8?cdn=ystenlive
-tvg-id="newtv中国功夫" tvg-name="newtv中国功夫" tvg-logo="https://epg.v1.mk/logo/newtv中国功夫.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/2000000003000000009.m3u8?cdn=hnbblive
-tvg-id="newtv怡伴健康" tvg-name="newtv怡伴健康" tvg-logo="https://epg.v1.mk/logo/newtv怡伴健康.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/1000000005000266011.m3u8?cdn=ystenlive
-tvg-id="newtv动作电影" tvg-name="newtv动作电影" tvg-logo="https://epg.v1.mk/logo/newtv动作电影.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/1000000004000018653.m3u8?cdn=ystenlive
-tvg-id="newtv军旅剧场" tvg-name="newtv军旅剧场" tvg-logo="https://epg.v1.mk/logo/newtv军旅剧场.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/2000000003000000014.m3u8?cdn=hnbblive
-tvg-id="newtv惊悚悬疑" tvg-name="newtv惊悚悬疑" tvg-logo="https://epg.v1.mk/logo/newtv惊悚悬疑.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/1000000004000024282.m3u8?cdn=ystenlive
-tvg-id="NewTV欢乐剧场" tvg-name="NewTV欢乐剧场" tvg-logo="https://epg.v1.mk/logo/NewTV欢乐剧场.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/1000000005000266012.m3u8?cdn=ystenlive
-tvg-id="NEWTV黑莓动画" tvg-name="NEWTV黑莓动画" tvg-logo="https://epg.v1.mk/logo/NEWTV黑莓动画.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/1000000004000021734.m3u8?cdn=ystenlive
-tvg-id="NewTV古装剧场" tvg-name="NewTV古装剧场" tvg-logo="https://epg.v1.mk/logo/NewTV古装剧场.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/2000000003000000024.m3u8?cdn=hnbblive
-tvg-id="newtv炫舞未来" tvg-name="newtv炫舞未来" tvg-logo="https://epg.v1.mk/logo/newtv炫舞未来.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/1000000001000000515.m3u8?cdn=ystenlive
-tvg-id="NEWTV哒啵赛事" tvg-name="NEWTV哒啵赛事" tvg-logo="https://epg.v1.mk/logo/哒啵赛事.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/1000000001000003775.m3u8?cdn=ystenlive
-tvg-id="newtv精品体育" tvg-name="newtv精品体育" tvg-logo="https://epg.v1.mk/logo/newtv精品体育.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/1000000004000014634.m3u8?cdn=ystenlive
-tvg-id="newtv超级体育" tvg-name="newtv超级体育" tvg-logo="https://epg.v1.mk/logo/newtv超级体育.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/1000000001000009601.m3u8?cdn=ystenlive
+NewTV精品综合,http://t8622699o8.vicp.fun:60024/itv/1000000004000019008.m3u8?cdn=ystenlive
+NEWTV精品萌宠,http://t8622699o8.vicp.fun:60024/itv/1000000006000032328.m3u8?cdn=ystenlive
+newtv精品纪录,http://t8622699o8.vicp.fun:60024/itv/1000000004000013730.m3u8?cdn=ystenlive
+newtv精品大剧,http://t8622699o8.vicp.fun:60024/itv/1000000004000013968.m3u8?cdn=ystenlive
+newtv爱情喜剧,http://t8622699o8.vicp.fun:60024/itv/2000000003000000010.m3u8?cdn=hnbblive
+NewTV金牌综艺,http://t8622699o8.vicp.fun:60024/itv/1000000004000026167.m3u8?cdn=ystenlive
+NEWTV武博世界,http://t8622699o8.vicp.fun:60024/itv/2000000003000000007.m3u8?cdn=hnbblive
+newtv潮妈辣婆,http://t8622699o8.vicp.fun:60024/itv/2000000003000000018.m3u8?cdn=hnbblive
+newtv军事评论,http://t8622699o8.vicp.fun:60024/itv/2000000003000000022.m3u8?cdn=hnbblive
+NewTV明星大片,http://t8622699o8.vicp.fun:60024/itv/2000000003000000016.m3u8?cdn=hnbblive
+newtv农业致富,http://t8622699o8.vicp.fun:60024/itv/2000000003000000003.m3u8?cdn=hnbblive
+NEWTV哒啵电竞,http://t8622699o8.vicp.fun:60024/itv/1000000006000032327.m3u8?cdn=ystenlive
+newtv中国功夫,http://t8622699o8.vicp.fun:60024/itv/2000000003000000009.m3u8?cdn=hnbblive
+newtv怡伴健康,http://t8622699o8.vicp.fun:60024/itv/1000000005000266011.m3u8?cdn=ystenlive
+newtv动作电影,http://t8622699o8.vicp.fun:60024/itv/1000000004000018653.m3u8?cdn=ystenlive
+newtv军旅剧场,http://t8622699o8.vicp.fun:60024/itv/2000000003000000014.m3u8?cdn=hnbblive
+newtv惊悚悬疑,http://t8622699o8.vicp.fun:60024/itv/1000000004000024282.m3u8?cdn=ystenlive
+NewTV欢乐剧场,http://t8622699o8.vicp.fun:60024/itv/1000000005000266012.m3u8?cdn=ystenlive
+NEWTV黑莓动画,http://t8622699o8.vicp.fun:60024/itv/1000000004000021734.m3u8?cdn=ystenlive
+NewTV古装剧场,http://t8622699o8.vicp.fun:60024/itv/2000000003000000024.m3u8?cdn=hnbblive
+newtv炫舞未来,http://t8622699o8.vicp.fun:60024/itv/1000000001000000515.m3u8?cdn=ystenlive
+NEWTV哒啵赛事,http://t8622699o8.vicp.fun:60024/itv/1000000001000003775.m3u8?cdn=ystenlive
+newtv精品体育,http://t8622699o8.vicp.fun:60024/itv/1000000004000014634.m3u8?cdn=ystenlive
+newtv超级体育,http://t8622699o8.vicp.fun:60024/itv/1000000001000009601.m3u8?cdn=ystenlive
 NewTV惊悚悬疑,http://tv.jkliu.cn:35455/itv/1000000004000024282.m3u8?cdn=ystenlive
-tvg-id="NEWTV黑莓电影" tvg-name="NEWTV黑莓电影" tvg-logo="https://epg.v1.mk/logo/NEWTV黑莓电影.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/1000000004000019624.m3u8?cdn=ystenlive
-tvg-id="NewTV东北热剧" tvg-name="NewTV东北热剧" tvg-logo="https://epg.v1.mk/logo/NewTV东北热剧.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/1000000005000266013.m3u8?cdn=ystenlive
+NEWTV黑莓电影,http://t8622699o8.vicp.fun:60024/itv/1000000004000019624.m3u8?cdn=ystenlive
+NewTV东北热剧,http://t8622699o8.vicp.fun:60024/itv/1000000005000266013.m3u8?cdn=ystenlive
 NewTV环球精选,http://vst.c01.live.sharkselection.com/ghs.m3u8?banFragment=eyJiYW5GcmFnbWVudCI6W3sic3RhcnRUaW1lIjowLCJoZWlnaHQiOi0xLCJ3aWR0aCI6LTEsInBpYyI6Imh0dHA6Ly9kb3duLnhpYW93ZWl6aGliby5jb20veHcvdXBsb2FkLzIwMTkwOC8zMC85L2U4NDUxNTc0ZDhhNWNmMDhlYmQ2YTc2NWIxMGExMTE2LnB
 NewTV环球精选,http://vst.c31.live.sharkselection.com/ghs.m3u8?banFragment=eyJiYW5GcmFnbWVudCI6W3sic3RhcnRUaW1lIjowLCJoZWlnaHQiOi0xLCJ3aWR0aCI6LTEsInBpYyI6Imh0dHA6Ly9kb3duLnhpYW93ZWl6aGliby5jb20veHcvdXBsb2FkLzIwMTkwOC8zMC85L2U4NDUxNTc0ZDhhNWNmMDhlYmQ2YTc2NWIxMGExMTE2LnB
 NewTV环球精选,http://vst.c03.live.ottshopping.net/ghs.m3u8?banFragment=eyJiYW5GcmFnbWVudCI6W3sic3RhcnRUaW1lIjowLCJoZWlnaHQiOi0xLCJ3aWR0aCI6LTEsInBpYyI6Imh0dHA6Ly9kb3duLnhpYW93ZWl6aGliby5jb20veHcvdXBsb2FkLzIwMTkwOC8zMC85L2U4NDUxNTc0ZDhhNWNmMDhlYmQ2YTc2NWIxMGExMTE2LnBuZy
@@ -936,7 +936,7 @@ NewTV超级体育,http://122.96.28.182:8014/1000000004000007755/ystenlive/index.
 NewTV超级体育,http://122.96.28.182:8014/1000000001000009601/ystenlive/index.m3u8$8M1080_易视腾
 NewTV超级体育,http://122.96.28.182:8014/2000000003000000030/hnbblive/index.m3u8$4M1080_湖南bblive
 NewTV爱情喜剧,http://122.96.28.182:8014/2000000003000000010/hnbblive/index.m3u8$4M1080_湖南bblive
-tvg-id="NEWTV黑莓动画" tvg-name="NEWTV黑莓动画" tvg-logo="https://epg.v1.mk/logo/NEWTV黑莓动画.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/1000000004000021734.m3u8?cdn=ystenlive
+NEWTV黑莓动画,http://t8622699o8.vicp.fun:60024/itv/1000000004000021734.m3u8?cdn=ystenlive
 NewTV购物,https://tvlive.ugoshop.com/ugotvlive/ssgotv.m3u8?auth_key=2312509421-0-0-6642ec3645caa943da6855a9ef7e2129#http://ocj2.kksmg.com/ocj2/ocj2.m3u8
 NewTV-哒啵电竞,http://231114.xyz:35455/itv/1000000006000032327.m3u8?cdn=ystenlive
 NewTV-黑莓电影,http://231114.xyz:35455/itv/1000000004000019624.m3u8?cdn=ystenlive
@@ -1474,34 +1474,34 @@ NewTV-金牌综艺,http://lt.hxtre.com:35455/itv/1000000004000026167.m3u8?cdn=ys
 NewTV-惊悚悬疑,http://lt.hxtre.com:35455/itv/1000000004000024282.m3u8?cdn=ystenlive
 NewTV-家庭剧场,http://lt.hxtre.com:35455/itv/1000000004000008284.m3u8?cdn=ystenlive
 NewTV-动作电影,http://lt.hxtre.com:35455/itv/1000000004000018653.m3u8?cdn=ystenlive
-tvg-id="NEWTV哒啵电竞" tvg-name="NEWTV哒啵电竞" tvg-logo="https://epg.v1.mk/logo/哒啵电竞.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/1000000006000032327.m3u8?cdn=ystenlive
-tvg-id="NEWTV哒啵赛事" tvg-name="NEWTV哒啵赛事" tvg-logo="https://epg.v1.mk/logo/哒啵赛事.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/1000000001000003775.m3u8?cdn=ystenlive
-tvg-id="NEWTV黑莓动画" tvg-name="NEWTV黑莓动画" tvg-logo="https://epg.v1.mk/logo/NEWTV黑莓动画.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/1000000004000021734.m3u8?cdn=ystenlive
-tvg-id="NEWTV黑莓电影" tvg-name="NEWTV黑莓电影" tvg-logo="https://epg.v1.mk/logo/NEWTV黑莓电影.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/1000000004000019624.m3u8?cdn=ystenlive
-tvg-id="newtv中国功夫" tvg-name="newtv中国功夫" tvg-logo="https://epg.v1.mk/logo/newtv中国功夫.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/2000000003000000009.m3u8?cdn=hnbblive
-tvg-id="newtv怡伴健康" tvg-name="newtv怡伴健康" tvg-logo="https://epg.v1.mk/logo/newtv怡伴健康.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/1000000005000266011.m3u8?cdn=ystenlive
-tvg-id="NewTV明星大片" tvg-name="NewTV明星大片" tvg-logo="https://epg.v1.mk/logo/NewTV明星大片.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/2000000003000000016.m3u8?cdn=hnbblive
-tvg-id="newtv农业致富" tvg-name="newtv农业致富" tvg-logo="https://epg.v1.mk/logo/newtv农业致富.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/2000000003000000003.m3u8?cdn=hnbblive
-tvg-id="newtv炫舞未来" tvg-name="newtv炫舞未来" tvg-logo="https://epg.v1.mk/logo/newtv炫舞未来.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/1000000001000000515.m3u8?cdn=ystenlive
-tvg-id="NEWTV武博世界" tvg-name="NEWTV武博世界" tvg-logo="https://epg.v1.mk/logo/NEWTV武博世界.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/2000000003000000007.m3u8?cdn=hnbblive
-tvg-id="newtv军事评论" tvg-name="newtv军事评论" tvg-logo="https://epg.v1.mk/logo/newtv军事评论.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/2000000003000000022.m3u8?cdn=hnbblive
+NEWTV哒啵电竞,http://t8622699o8.vicp.fun:60024/itv/1000000006000032327.m3u8?cdn=ystenlive
+NEWTV哒啵赛事,http://t8622699o8.vicp.fun:60024/itv/1000000001000003775.m3u8?cdn=ystenlive
+NEWTV黑莓动画,http://t8622699o8.vicp.fun:60024/itv/1000000004000021734.m3u8?cdn=ystenlive
+NEWTV黑莓电影,http://t8622699o8.vicp.fun:60024/itv/1000000004000019624.m3u8?cdn=ystenlive
+newtv中国功夫,http://t8622699o8.vicp.fun:60024/itv/2000000003000000009.m3u8?cdn=hnbblive
+newtv怡伴健康,http://t8622699o8.vicp.fun:60024/itv/1000000005000266011.m3u8?cdn=ystenlive
+NewTV明星大片,http://t8622699o8.vicp.fun:60024/itv/2000000003000000016.m3u8?cdn=hnbblive
+newtv农业致富,http://t8622699o8.vicp.fun:60024/itv/2000000003000000003.m3u8?cdn=hnbblive
+newtv炫舞未来,http://t8622699o8.vicp.fun:60024/itv/1000000001000000515.m3u8?cdn=ystenlive
+NEWTV武博世界,http://t8622699o8.vicp.fun:60024/itv/2000000003000000007.m3u8?cdn=hnbblive
+newtv军事评论,http://t8622699o8.vicp.fun:60024/itv/2000000003000000022.m3u8?cdn=hnbblive
 NewTV-魅力潇湘,http://t8622699o8.vicp.fun:60024/itv/1000000001000006197.m3u8?cdn=ystenlive
-tvg-id="newtv家庭剧场" tvg-name="newtv家庭剧场" tvg-logo="https://epg.v1.mk/logo/newtv家庭剧场.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/1000000004000008284.m3u8?cdn=ystenlive
-tvg-id="newtv惊悚悬疑" tvg-name="newtv惊悚悬疑" tvg-logo="https://epg.v1.mk/logo/newtv惊悚悬疑.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/1000000004000024282.m3u8?cdn=ystenlive
-tvg-id="newtv军旅剧场" tvg-name="newtv军旅剧场" tvg-logo="https://epg.v1.mk/logo/newtv军旅剧场.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/2000000003000000014.m3u8?cdn=hnbblive
-tvg-id="NewTV金牌综艺" tvg-name="NewTV金牌综艺" tvg-logo="https://epg.v1.mk/logo/NewTV金牌综艺.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/1000000004000026167.m3u8?cdn=ystenlive
-tvg-id="newtv动作电影" tvg-name="newtv动作电影" tvg-logo="https://epg.v1.mk/logo/newtv动作电影.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/1000000004000018653.m3u8?cdn=ystenlive
-tvg-id="NewTV古装剧场" tvg-name="NewTV古装剧场" tvg-logo="https://epg.v1.mk/logo/NewTV古装剧场.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/2000000003000000024.m3u8?cdn=hnbblive
-tvg-id="NewTV欢乐剧场" tvg-name="NewTV欢乐剧场" tvg-logo="https://epg.v1.mk/logo/NewTV欢乐剧场.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/1000000005000266012.m3u8?cdn=ystenlive
-tvg-id="newtv潮妈辣婆" tvg-name="newtv潮妈辣婆" tvg-logo="https://epg.v1.mk/logo/newtv潮妈辣婆.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/2000000003000000018.m3u8?cdn=hnbblive
-tvg-id="NewTV东北热剧" tvg-name="NewTV东北热剧" tvg-logo="https://epg.v1.mk/logo/NewTV东北热剧.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/1000000005000266013.m3u8?cdn=ystenlive
-tvg-id="newtv超级体育" tvg-name="newtv超级体育" tvg-logo="https://epg.v1.mk/logo/newtv超级体育.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/1000000001000009601.m3u8?cdn=ystenlive
-tvg-id="newtv精品纪录" tvg-name="newtv精品纪录" tvg-logo="https://epg.v1.mk/logo/newtv精品纪录.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/1000000004000013730.m3u8?cdn=ystenlive
-tvg-id="NEWTV精品萌宠" tvg-name="NEWTV精品萌宠" tvg-logo="https://epg.v1.mk/logo/NEWTV精品萌宠.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/1000000006000032328.m3u8?cdn=ystenlive
-tvg-id="newtv爱情喜剧" tvg-name="newtv爱情喜剧" tvg-logo="https://epg.v1.mk/logo/newtv爱情喜剧.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/2000000003000000010.m3u8?cdn=hnbblive
-tvg-id="newtv精品体育" tvg-name="newtv精品体育" tvg-logo="https://epg.v1.mk/logo/newtv精品体育.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/1000000004000014634.m3u8?cdn=ystenlive
-tvg-id="NewTV精品综合" tvg-name="NewTV精品综合" tvg-logo="https://epg.v1.mk/logo/NewTV精品综合.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/1000000004000019008.m3u8?cdn=ystenlive
-tvg-id="newtv精品大剧" tvg-name="newtv精品大剧" tvg-logo="https://epg.v1.mk/logo/newtv精品大剧.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/1000000004000013968.m3u8?cdn=ystenlive
+newtv家庭剧场,http://t8622699o8.vicp.fun:60024/itv/1000000004000008284.m3u8?cdn=ystenlive
+newtv惊悚悬疑,http://t8622699o8.vicp.fun:60024/itv/1000000004000024282.m3u8?cdn=ystenlive
+newtv军旅剧场,http://t8622699o8.vicp.fun:60024/itv/2000000003000000014.m3u8?cdn=hnbblive
+NewTV金牌综艺,http://t8622699o8.vicp.fun:60024/itv/1000000004000026167.m3u8?cdn=ystenlive
+newtv动作电影,http://t8622699o8.vicp.fun:60024/itv/1000000004000018653.m3u8?cdn=ystenlive
+NewTV古装剧场,http://t8622699o8.vicp.fun:60024/itv/2000000003000000024.m3u8?cdn=hnbblive
+NewTV欢乐剧场,http://t8622699o8.vicp.fun:60024/itv/1000000005000266012.m3u8?cdn=ystenlive
+newtv潮妈辣婆,http://t8622699o8.vicp.fun:60024/itv/2000000003000000018.m3u8?cdn=hnbblive
+NewTV东北热剧,http://t8622699o8.vicp.fun:60024/itv/1000000005000266013.m3u8?cdn=ystenlive
+newtv超级体育,http://t8622699o8.vicp.fun:60024/itv/1000000001000009601.m3u8?cdn=ystenlive
+newtv精品纪录,http://t8622699o8.vicp.fun:60024/itv/1000000004000013730.m3u8?cdn=ystenlive
+NEWTV精品萌宠,http://t8622699o8.vicp.fun:60024/itv/1000000006000032328.m3u8?cdn=ystenlive
+newtv爱情喜剧,http://t8622699o8.vicp.fun:60024/itv/2000000003000000010.m3u8?cdn=hnbblive
+newtv精品体育,http://t8622699o8.vicp.fun:60024/itv/1000000004000014634.m3u8?cdn=ystenlive
+NewTV精品综合,http://t8622699o8.vicp.fun:60024/itv/1000000004000019008.m3u8?cdn=ystenlive
+newtv精品大剧,http://t8622699o8.vicp.fun:60024/itv/1000000004000013968.m3u8?cdn=ystenlive
 NewTV-黑莓动画,http://b.zgjok.com:35455/itv/1000000004000021734.m3u8?cdn=ystenlive
 NewTV-哒啵电竞,http://b.zgjok.com:35455/itv/1000000006000032327.m3u8?cdn=ystenlive
 NewTV-哒啵赛事,http://b.zgjok.com:35455/itv/1000000001000003775.m3u8?cdn=ystenlive
@@ -1606,8 +1606,8 @@ NewTV-超级电视剧,http://i.oskin.cc:35455/itv/1000000006000268003.m3u8?cdn=y
 NewTV-精品萌宠,http://i.oskin.cc:35455/itv/1000000006000032328.m3u8?cdn=ystenlive
 NewTV-精品体育,http://i.oskin.cc:35455/itv/1000000004000014634.m3u8?cdn=ystenlive
 NewTV惊悚悬疑,http://tv.jkliu.cn:35455/itv/1000000004000024282.m3u8?cdn=ystenlive
-tvg-id="newtv精品体育" tvg-name="newtv精品体育" tvg-logo="https://epg.v1.mk/logo/newtv精品体育.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/1000000004000014634.m3u8?cdn=ystenlive
-tvg-id="newtv超级体育" tvg-name="newtv超级体育" tvg-logo="https://epg.v1.mk/logo/newtv超级体育.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/1000000001000009601.m3u8?cdn=ystenlive
+newtv精品体育,http://t8622699o8.vicp.fun:60024/itv/1000000004000014634.m3u8?cdn=ystenlive
+newtv超级体育,http://t8622699o8.vicp.fun:60024/itv/1000000001000009601.m3u8?cdn=ystenlive
 NewTV-家庭剧场,http://171.216.83.24:35455/itv/1000000004000008284.m3u8?cdn=ystenlive
 NewTV-惊悚悬疑,http://171.216.83.24:35455/itv/1000000004000024282.m3u8?cdn=ystenlive
 NewTV-精品综合,http://182.138.146.17:35455/itv/1000000004000019008.m3u8?cdn=ystenlive
@@ -1938,8 +1938,8 @@ NewTV-欢乐剧场,http://175.0.37.234:35455/itv/1000000005000266012.m3u8?cdn=ys
 NewTV-动作电影,http://175.0.37.234:35455/itv/1000000004000018653.m3u8?cdn=ystenlive
 NewTV-东北热剧,http://175.0.37.234:35455/itv/1000000005000266013.m3u8?cdn=ystenlive
 NewTV-家庭剧场,http://14.111.93.163:35455/itv/1000000004000008284.m3u8?cdn=ystenlive
-tvg-id="NEWTV哒啵赛事" tvg-name="NEWTV哒啵赛事" tvg-logo="https://epg.v1.mk/logo/哒啵赛事.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/1000000001000003775.m3u8?cdn=ystenlive
-tvg-id="newtv炫舞未来" tvg-name="newtv炫舞未来" tvg-logo="https://epg.v1.mk/logo/newtv炫舞未来.png" group-title="NEWTV",http://t8622699o8.vicp.fun:60024/itv/1000000001000000515.m3u8?cdn=ystenlive
+NEWTV哒啵赛事,http://t8622699o8.vicp.fun:60024/itv/1000000001000003775.m3u8?cdn=ystenlive
+newtv炫舞未来,http://t8622699o8.vicp.fun:60024/itv/1000000001000000515.m3u8?cdn=ystenlive
 NewTV-农业致富,http://nas820611.diskstation.me:35455/itv/2000000003000000003.m3u8?cdn=hnbblive
 NewTV-东北热剧,http://nas820611.diskstation.me:35455/itv/1000000005000266013.m3u8?cdn=ystenlive
 NewTV古装剧场,http://nas.ikuai1981.top:5027/TVOD/2000000003000000024/hnbblive/index.m3u8$4M1080_湖南bblive
@@ -3149,7 +3149,7 @@ CCTV风云剧场,http://[2409:8087:7008:20::c]/dbiptv.sn.chinamobile.com/PLTV/88
 风云剧场,http://jf.jxx2023.work:40446/tsfile/live/1150_1.m3u8?key=txiptv
 风云剧场,http://103.39.109.77:9909/hdlive.php?pn=31be045f47c992b2461429f33977e121
 风云剧场,http://36.129.204.120:65501/2034.m3u8
-tvg-id="风云剧场" tvg-name="风云剧场" tvg-logo="https://epg.v1.mk/logo/风云剧场.png" group-title="央视",http://t8622699o8.vicp.fun:60024/tptv/G_FENGYUNJC-CQ.m3u8
+风云剧场,http://t8622699o8.vicp.fun:60024/tptv/G_FENGYUNJC-CQ.m3u8
 风云剧场,rtsp://123.147.112.17:8089/04000001/01000000004000000000000000000409?AuthInfo=xxx&userid=gf001&userid=gf001
 
 世界地理,http://[2409:8087:7001:20:2::3]:80/dbiptv.sn.chinamobile.com/PLTV/88888893/224/3221226947/index.m3u8
@@ -3317,7 +3317,7 @@ CCTV风云足球,http://www.zzrs888.top/阳泉.php?id=094
 女性时尚,http://[2409:8087:7001:20:2::3]:80/dbiptv.sn.chinamobile.com/PLTV/88888893/224/3221226969/index.m3u8
 CCTV女性时尚,http://180.213.174.225:9901/tsfile/live/1054_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV女性时尚,http://180.213.174.225:9901/tsfile/live/1054_1.m3u8?key=txiptv&playlive=1&authid=0
-tvg-id="女性时尚" tvg-name="女性时尚" tvg-logo="https://epg.v1.mk/logo/女性时尚.png" group-title="央视",http://t8622699o8.vicp.fun:60024/tptv/G_NVXINGSS-CQ.m3u8
+女性时尚,http://t8622699o8.vicp.fun:60024/tptv/G_NVXINGSS-CQ.m3u8
 CCTV女性时尚,http://8.138.90.107/公众号【睡眼迷离的猫】/gdx.php?id=239.253.43.23:5146
 
 央视台球,http://[2409:8087:7001:20:2::3]:80/dbiptv.sn.chinamobile.com/PLTV/88888893/224/3221226956/index.m3u8
@@ -3562,7 +3562,7 @@ CCTV中学生,http://iptv.diyp.site/公众号【DIYP】.php?key=gat5&id=20a126a9
 中学生,https://migu.freetv.top/migu/708869532.m3u8?migutoken=39df68314456c75e61eaebf3d0ed37aa4fa7fccbf85474d486b5e51033c9148e93ff9abe58553959d783b8e0f5227157f4621ff8a68d96281d6665e6e6802b07064b8bb6c8762b049f62f665ee
 中学生,https://migu.freetv.top/migu/708869532.m3u8?migutoken=3d44aad7bfd6a4c9479caf25fb0a81a64349fb6431c1c9274a6dd249e2d4c8686713147e9b01e40cdf852b7b7940ef690fe567e330b516c16fbdcfc029f8b7b38168a9e32fefb2e5f1e3b7ed2e
 中学生,https://migu.freetv.top/migu/708869532.m3u8?migutoken=9a37d74f6afbb1f1d349614ad4729a6ab6420734111779d540d96ce68adaaef4df65631f53c817953761bde7dee05868e4dcc6f7801e9b43fe2834df42b882238168e6924846e02fc586c781b8
-tvg-id="中学生" tvg-name="中学生" tvg-logo="https://epg.v1.mk/logo/中学生.png" group-title="教育",https://migu.freetv.top/migu/708869532.m3u8?migutoken=07632633e36f2c7534d6da59ee9101c8d6becfaf99c13e6d71b4301ff442fac283577f833cb4a64016b2b95eb29ad64d2ccf951b6d70beb502f84e65c9bc20000e20a3ece42925024d34099838
+中学生,https://migu.freetv.top/migu/708869532.m3u8?migutoken=07632633e36f2c7534d6da59ee9101c8d6becfaf99c13e6d71b4301ff442fac283577f833cb4a64016b2b95eb29ad64d2ccf951b6d70beb502f84e65c9bc20000e20a3ece42925024d34099838
 中学生台,http://kxrj.site:8690/php/mg9.php?id=zxs
 中学生,https://migu.freetv.top/migu/708869532.m3u8?migutoken=52d4a37d4bf707bd9059f1e82e01f3c81a7940f4bc7663a4d2424410f4bca35b33395aca87899b4b3e79ec535978271b00951cdece093208b0518605e00b27e76058dc4d31c0d15c291df8297d
 中学生台,http://kxrj.site:8899/php/mg9.php?id=zxs
@@ -4396,7 +4396,7 @@ FSDSS-284 河南实里★正太！恶作剧好きな悪ガキに偷偷媚薬を�
 河南卫视标清,rtsp://115.85.232.19/PLTV/88888910/224/3221225545/10000100000000060000000000107325_0.smil
 河南卫视标清,rtsp://60.13.39.19/PLTV/88888910/224/3221225545/10000100000000060000000000107325_0.smil
 河南卫视,https://www.freetv.top/migu/790187291.m3u8?migutoken=b1478200526bb4d55ef6516538aaeca2e5e44609d13b169acfc068f09bfc26b8aed7d5e66bee74286c18d529dfc7b0170fa2295298fe8401a2b3b4b2d2d636440150a5d1df11439de7fbda508b
-tvg-id="河南卫视" tvg-name="河南卫视" tvg-logo="https://epg.v1.mk/logo/河南卫视.png" group-title="河南",http://t8622699o8.vicp.fun:60024/itv/5000000011000031119.m3u8?cdn=bestzb
+河南卫视,http://t8622699o8.vicp.fun:60024/itv/5000000011000031119.m3u8?cdn=bestzb
 河南卫视标清,rtsp://60.13.23.179/PLTV/88888910/224/3221225545/10000100000000060000000000107325_0.smil
 河南卫视标清,rtsp://180.95.143.19/PLTV/88888910/224/3221225545/10000100000000060000000000107325_0.smil
 河南卫视标清,rtsp://221.7.61.147/PLTV/88888910/224/3221225545/10000100000000060000000000107325_0.smil
@@ -5050,7 +5050,7 @@ HND-456 大学酒会-河南実里,https://t7.cdn2020.com/video/m3u8/2021/07/16/b
 河南卫视,http://221.13.233.63:9901/tsfile/live/0139_1.m3u8?key=txiptv&playlive=1&authid=0
 河南卫视,http://36.129.204.120:65501/2048.m3u8
 河南卫视,http://119.125.134.201:9901/tsfile/live/0139_1.m3u8?key=txiptv&playlive=1&authid=0
-tvg-id="河南卫视" tvg-name="河南卫视" tvg-logo="https://epg.v1.mk/logo/河南卫视.png" group-title="河南",http://t8622699o8.vicp.fun:60024/itv/5000000011000031119.m3u8?cdn=bestzb
+河南卫视,http://t8622699o8.vicp.fun:60024/itv/5000000011000031119.m3u8?cdn=bestzb
 河南音乐广播,http://stream.hndt.com/live/yinyue/playlist.m3u8
 河南洛阳音乐广播,https://lhttp.qingting.fm/live/1226/64k.mp3?Qt=3210ddbeaa16948a702b6049b8d9a202
 河南郑州音乐广播,https://lhttp.qingting.fm/live/4921/64k.mp3?Qt=b64a70760bb75e3ecfd1ad86d8f10c88
@@ -5058,7 +5058,7 @@ tvg-id="河南卫视" tvg-name="河南卫视" tvg-logo="https://epg.v1.mk/logo/�
 河南洛阳音乐经济,https://ls.qingting.fm/live/1226/64k.m3u8
 湖南-河南星河音乐广播,http://lhttp.qingting.fm/live/20210755/64k.mp3
 河南网络广播·民谣音乐台,http://lhttp.qingting.fm/live/20207763/64k.mp3
-tvg-id="河南卫视" tvg-name="河南卫视" tvg-logo="https://epg.v1.mk/logo/河南卫视.png" group-title="河南",http://t8622699o8.vicp.fun:60024/tptv/G_HENAN-CQ.m3u8
+河南卫视,http://t8622699o8.vicp.fun:60024/tptv/G_HENAN-CQ.m3u8
 河南公共,http://182.92.109.190:1668/hntv/hntv.php?id=hngg
 河南电视剧,http://182.92.109.190:1668/hntv/hntv.php?id=hndsj
 河南新闻,http://182.92.109.190:1668/hntv/hntv.php?id=hnxw
