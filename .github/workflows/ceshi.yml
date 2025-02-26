@@ -83,6 +83,7 @@ jobs:
             }
         }
         ' tvboxlist/iptv.txt > tvboxlist/iptvFormatOutput.txt
+        awk -F',' '{split($2, links, "#"); for (i in links) print $1 "," links[i]}' tvboxlist/iptvFormatOutput.txt > tvboxlist/iptvFormatOutput2.txt
         perl -pe '
             chomp;  # 去掉行尾的换行符
             s/^([^,]*)(,.*)/$1$2/;  # 将行分为两部分：逗号前和逗号后
@@ -114,7 +115,7 @@ jobs:
             $_ = $first_part . $rest . "\n";  # 显式添加换行符
         ' tvboxlist/iptvFormatOutput.txt > tvboxlist/iptvTempOutput.txt
 
-        awk -F'$' '!seen[$1]++' "tvboxlist/iptvTempOutput.txt" > "tvboxlist/iptvDeduplicationOutput.txt"
+        awk -F'$' '{sub(/^[ \t]+|[ \t]+$/, "", $1); if (!seen[$1]++) print}' "tvboxlist/iptvTempOutput.txt" > "tvboxlist/iptvDeduplicationOutput.txt"
         
     - name: Apply 应用
       run: |
