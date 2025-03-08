@@ -44,14 +44,65 @@ jobs:
     - name: Syn upstream  同步上游
       run: |
         rm -f tvboxlist/iptv.txt
-        # 遍历 iptvlist.txt 文件中的每一行
-        while IFS= read -r url && url=$(echo "$url" | tr -d '\r'); do
-          new_response=$(curl -L "$url")
-          echo "$new_response" >> tvboxlist/iptv.txt
-          echo >> tvboxlist/iptv.txt
-          # 添加延时，例如每秒发送一个请求（3秒延时）
+        # # 遍历 iptvlist.txt 文件中的每一行
+        # while IFS= read -r url && url=$(echo "$url" | tr -d '\r'); do
+        #   new_response=$(curl -L "$url")
+        #   echo "$new_response" >> tvboxlist/iptv.txt
+        #   echo >> tvboxlist/iptv.txt
+        #   # 添加延时，例如每秒发送一个请求（3秒延时）
+        #   sleep 3
+        # done < .github/workflows/iptv/iptvlist.txt
+
+        # 最大重试次数
+        MAX_RETRIES=3
+        # 初始重试延迟（秒）
+        RETRY_DELAY=3
+
+        while IFS= read -r url; do
+          # 去除可能存在的Windows换行符
+          url=$(echo "$url" | tr -d '\r')
+          
+          # 初始化重试计数器
+          retries=0
+          success=false
+
+          while [ $retries -le $MAX_RETRIES ]; do
+            # 发送请求
+            new_response=$(curl -Ls "$url" -w "%{http_code}") # 包含HTTP状态码
+            
+            # 分离HTTP状态码和响应体
+            http_code=${new_response: -3}
+            body=${new_response%???}
+
+            # 检查是否包含错误信息或HTTP状态码异常
+            if [[ "$body" == *"ChmlFrp-错误警告"* || $http_code -ge 400 ]]; then
+              echo "检测到错误或HTTP状态码异常（尝试次数: $((retries+1))/$MAX_RETRIES）"
+              retries=$((retries+1))
+              
+              if [ $retries -lt $MAX_RETRIES ]; then
+                sleep_time=$((RETRY_DELAY * retries)) # 指数退避延迟
+                echo "等待 $sleep_time 秒后重试..."
+                sleep $sleep_time
+              fi
+            else
+              # 成功获取有效内容
+              echo "$body" >> tvboxlist/iptv.txt
+              echo >> tvboxlist/iptv.txt
+              success=true
+              break
+            fi
+          done
+
+          # 超过最大重试次数仍未成功
+          if ! $success; then
+            echo "已跳过链接：$url（超过最大重试次数）" >&2
+          fi
+
+          # 固定间隔（处理完一个链接后等待3秒）
           sleep 3
+
         done < .github/workflows/iptv/iptvlist.txt
+        
         awk '
         BEGIN {
             # 设置字段分隔符为空格或逗号
