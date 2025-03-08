@@ -75,7 +75,7 @@ jobs:
             body=${new_response%???}
 
             # 检查是否包含错误信息或HTTP状态码异常
-            if [[ "$body" == *"ChmlFrp-错误警告"* || $http_code -ge 400 ]]; then
+            if [[ "$body" == *"ChmlFrp-错误警告"* || "$body" == *"直播源中轉站"* || $http_code -ge 400 ]]; then
               echo "检测到错误或HTTP状态码异常（尝试次数: $((retries+1))/$MAX_RETRIES）"
               retries=$((retries+1))
               
@@ -164,7 +164,7 @@ jobs:
 
             # 将处理后的第一部分和第二部分重新组合
             $_ = $first_part . $rest . "\n";  # 显式添加换行符
-        ' tvboxlist/iptvFormatOutput.txt > tvboxlist/iptvTempOutput.txt
+        ' tvboxlist/iptvFormatOutput2.txt > tvboxlist/iptvTempOutput.txt
 
         awk -F'$' '{sub(/^[ \t]+|[ \t]+$/, "", $1); if (!seen[$1]++) print}' "tvboxlist/iptvTempOutput.txt" > "tvboxlist/iptvDeduplicationOutput.txt"
         
