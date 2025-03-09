@@ -127,7 +127,7 @@ jobs:
         ' tvboxlist/iptv.txt > tvboxlist/iptvFormatOutput.txt
         awk -F, '
         $2 ~ /#genre#/ { 
-            if ($1 ~ /未分组|歪歪|咪咕|美食|埋堆|虎牙|观影|购物|大杂烩|测试|动画频道|直播|经典小品|MTV|女团|春晚|中国之声|车载|影视|斗鱼|数字|纪录片频道|歌|DJ音乐|收音广播|YYY频道|电影频道|国内影院|游戏频道|少儿影院/) {  # 匹配多个分类名
+            if ($1 ~ /少儿|经典剧场|儿童|歪歪|咪咕|美食|埋堆|虎牙|观影|测试|直播|经典小品|MTV|女团|春晚|中国之声|车载|影视|斗鱼|^数字|纪录片频道|歌|DJ音乐|收音广播|YYY频道|电影频道.|国内影院|游戏频道/) {  # 匹配多个分类名
                 skip = 1
             } else {
                 skip = 0
@@ -137,8 +137,9 @@ jobs:
         } 
         !skip { print }
         ' tvboxlist/iptvFormatOutput.txt > tvboxlist/iptvFormatOutput2.txt
-        awk -F',' 'BEGIN{IGNORECASE=1} $1 !~ /DJ|YY|Radio/ {print}' tvboxlist/iptvFormatOutput2.txt > tvboxlist/iptvFormatOutput3.txt
-        awk -F',' '{split($2, links, "#"); for (i in links) print $1 "," links[i]}' tvboxlist/iptvFormatOutput3.txt > tvboxlist/iptvFormatOutput4.txt
+        grep -v -e '#genre#' -e '广播' -e '春晚' tvboxlist/iptvFormatOutput2.txt > tvboxlist/iptvFormatOutput3.txt
+        awk -F',' 'BEGIN{IGNORECASE=1} $1 !~ /DJ|YY|Radio/ {print}' tvboxlist/iptvFormatOutput3.txt > tvboxlist/iptvFormatOutput4.txt
+        awk -F',' '{split($2, links, "#"); for (i in links) print $1 "," links[i]}' tvboxlist/iptvFormatOutput4.txt > tvboxlist/iptvFormatOutput5.txt
         
         perl -pe '
             chomp;  # 去掉行尾的换行符
@@ -174,11 +175,21 @@ jobs:
 
             # 将处理后的第一部分和第二部分重新组合     CCTV-|CCTV|
             $_ = $first_part . $rest . "\n";  # 显式添加换行符
-        ' tvboxlist/iptvFormatOutput4.txt > tvboxlist/iptvTempOutput.txt
-        sed -i -E 's/^(CCTV)([0-9]+)(.*,.*)/\1-\2\3/' tvboxlist/iptvTempOutput.txt
-        sed -i -E 's/^(CCTV-[0-9]+)[^0-9,]*(,.*)/\1\2/' tvboxlist/iptvTempOutput.txt
-        sed -i -E 's/^(CCTV-)([^0-9,]+)(,.*)/\2\3/' tvboxlist/iptvTempOutput.txt
-        sed -i -E 's/^(CCTV)([^0-9,]+)(,.*)/\2\3/' tvboxlist/iptvTempOutput.txt
+        ' tvboxlist/iptvFormatOutput5.txt > tvboxlist/iptvTempOutput.txt
+        # sed -i -E 's/^(CCTV)([0-9]+)(.*,.*)/\1-\2\3/' tvboxlist/iptvTempOutput.txt
+        # sed -i -E 's/^(CCTV-[0-9]+)[^0-9,]*(,.*)/\1\2/' tvboxlist/iptvTempOutput.txt
+        # sed -i -E 's/^(CCTV-)([^0-9,]+)(,.*)/\2\3/' tvboxlist/iptvTempOutput.txt
+        # sed -i -E 's/^(CCTV)([^0-9,]+)(,.*)/\2\3/' tvboxlist/iptvTempOutput.txt
+        sed -i -E '
+          # 处理 CCTV 后跟数字（添加连字符并清理后续非数字）
+          s/^(CCTV)([0-9]+)(.*,.*)/\1-\2\3/;
+          # 处理 CCTV-数字 后跟非数字（清理多余内容）
+          s/^(CCTV-[0-9]+)[^0-9,]*(,.*)/\1\2/;
+          # 处理 CCTV- 后跟非数字（删除 CCTV- 前缀）
+          s/^(CCTV-)([^0-9,]+)(,.*)/\2\3/;
+          # 处理 CCTV 后跟非数字（删除 CCTV 前缀）
+          s/^(CCTV)([^0-9,]+)(,.*)/\2\3/
+        ' tvboxlist/iptvTempOutput.txt
 
         awk -F'$' '{sub(/^[ \t]+|[ \t]+$/, "", $1); if (!seen[$1]++) print}' "tvboxlist/iptvTempOutput.txt" > "tvboxlist/iptvDeduplicationOutput.txt"
         
