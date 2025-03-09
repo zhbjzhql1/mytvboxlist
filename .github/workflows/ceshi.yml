@@ -134,7 +134,19 @@ jobs:
             }
         }
         ' tvboxlist/iptv.txt > tvboxlist/iptvFormatOutput.txt
-        grep -v -e '#genre#' -e '广播' -e '韩国女团' -e '韩国太妍' -e '韩国歌团' -e '韩国动感舞曲' -e '歌团★' -e '歌MV' -e '斗鱼' -e '春晚' -e '电台' -e '印度歌舞' -e 'DJ' -e 'YY' tvboxlist/iptvFormatOutput.txt > tvboxlist/iptvFormatOutput2.txt
+        awk -F, '
+        $2 ~ /#genre#/ { 
+            if ($1 ~ /未分组|歪歪|咪咕|美食|埋堆|虎牙|观影|购物|大杂烩|测试|动画频道|直播|经典小品|MTV|女团|春晚|中国之声|车载|影视|斗鱼|数字|纪录片频道|歌|DJ音乐|收音广播|YYY频道|电影频道|国内影院|游戏频道|少儿影院/) {  # 匹配多个分类名
+                skip = 1
+            } else {
+                skip = 0
+                print
+            }
+            next
+        } 
+        !skip { print }
+        ' tvboxlist/iptvFormatOutput.txt > tvboxlist/iptvFormatOutput2.txt
+        # grep -v -e '#genre#' -e '广播' -e '韩国女团' -e '韩国太妍' -e '韩国歌团' -e '韩国动感舞曲' -e '歌团★' -e '歌MV' -e '斗鱼' -e '春晚' -e '电台' -e '印度歌舞' -e 'DJ' -e 'YY' tvboxlist/iptvFormatOutput.txt > tvboxlist/iptvFormatOutput2.txt
         awk -F',' 'BEGIN{IGNORECASE=1} $1 !~ /DJ|YY|Radio/ {print}' tvboxlist/iptvFormatOutput2.txt > tvboxlist/iptvFormatOutput3.txt
         awk -F',' '{split($2, links, "#"); for (i in links) print $1 "," links[i]}' tvboxlist/iptvFormatOutput3.txt > tvboxlist/iptvFormatOutput4.txt
         
