@@ -44,15 +44,6 @@ jobs:
     - name: Syn upstream  同步上游
       run: |
         rm -f tvboxlist/iptv.txt
-        # # 遍历 iptvlist.txt 文件中的每一行
-        # while IFS= read -r url && url=$(echo "$url" | tr -d '\r'); do
-        #   new_response=$(curl -L "$url")
-        #   echo "$new_response" >> tvboxlist/iptv.txt
-        #   echo >> tvboxlist/iptv.txt
-        #   # 添加延时，例如每秒发送一个请求（3秒延时）
-        #   sleep 3
-        # done < .github/workflows/iptv/iptvlist.txt
-
         # 最大重试次数
         MAX_RETRIES=3
         # 初始重试延迟（秒）
@@ -146,7 +137,6 @@ jobs:
         } 
         !skip { print }
         ' tvboxlist/iptvFormatOutput.txt > tvboxlist/iptvFormatOutput2.txt
-        # grep -v -e '#genre#' -e '广播' -e '韩国女团' -e '韩国太妍' -e '韩国歌团' -e '韩国动感舞曲' -e '歌团★' -e '歌MV' -e '斗鱼' -e '春晚' -e '电台' -e '印度歌舞' -e 'DJ' -e 'YY' tvboxlist/iptvFormatOutput.txt > tvboxlist/iptvFormatOutput2.txt
         awk -F',' 'BEGIN{IGNORECASE=1} $1 !~ /DJ|YY|Radio/ {print}' tvboxlist/iptvFormatOutput2.txt > tvboxlist/iptvFormatOutput3.txt
         awk -F',' '{split($2, links, "#"); for (i in links) print $1 "," links[i]}' tvboxlist/iptvFormatOutput3.txt > tvboxlist/iptvFormatOutput4.txt
         
