@@ -199,6 +199,22 @@ jobs:
             $first_part =~ s/(?i)衢州开化国家公园|开化公园/开化国家公园/g;
             $first_part =~ s/(?i)缙云综合|丽水缙云综合/缙云新闻综合/g;
             $first_part =~ s/(?i)咸阳-1台|咸阳-1/咸阳综合/g;
+            $first_part =~ s/(?i)汉中-3台|汉中-3/汉中3/g;
+            $first_part =~ s/(?i)安徽体育/安徽综艺体育/g;
+            $first_part =~ s/(?i)风云.足球/风云足球/g;
+            $first_part =~ s/(?i)咪足IPV6/咪咕足球/g;
+            $first_part =~ s/(?i)河南民生频道/河南民生/g;
+            $first_part =~ s/(?i)衢州龙游生活/龙游生活娱乐/g;
+            $first_part =~ s/(?i)衢州龙游综合/龙游新闻综合/g;
+            $first_part =~ s/(?i)黑龙江影$/黑龙江影视/g;
+            $first_part =~ s/(?i)浙江数码时代/之江纪录/g;
+            $first_part =~ s/(?i)浙江公共新闻/浙江新闻/g;
+            $first_part =~ s/(?i)浙江民生$/浙江民生休闲/g;
+            $first_part =~ s/(?i)浙江经济$/浙江经济生活/g;
+            $first_part =~ s/(?i)浙江教科$/浙江教科影视/g;
+            $first_part =~ s/(?i)河南焦作/焦作/g;
+            $first_part =~ s/(?i)NEWTV环球精选/聚鲨环球精选/g;
+            $first_part =~ s/(?i)河南新县综合/新县综合/g;
 
             # 将处理后的第一部分和第二部分重新组合     CCTV-|CCTV|
             $_ = $first_part . $rest . "\n";  # 显式添加换行符
