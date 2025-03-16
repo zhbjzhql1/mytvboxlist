@@ -93,6 +93,19 @@ jobs:
           sleep 3
 
         done < .github/workflows/iptv/iptvlist.txt
+
+        awk -F, '
+        $2 ~ /#genre#/ { 
+            if ($1 ~ /少儿|经典剧场|儿童|歪歪|咪咕|美食|埋堆|虎牙|观影|测试|直播|经典小品|MTV|女团|春晚|中国之声|车载|影视|斗鱼|^数字|纪录片频道|歌|DJ音乐|收音广播|YYY频道|电影频道.|国内影院|游戏频道/) {  # 匹配多个分类名
+                skip = 1
+            } else {
+                skip = 0
+                print
+            }
+            next
+        } 
+        !skip { print }
+        ' tvboxlist/iptv.txt > tvboxlist/iptvFormatOutput.txt
         
         awk '
         BEGIN {
@@ -124,19 +137,8 @@ jobs:
                 print $0;
             }
         }
-        ' tvboxlist/iptv.txt > tvboxlist/iptvFormatOutput.txt
-        awk -F, '
-        $2 ~ /#genre#/ { 
-            if ($1 ~ /少儿|经典剧场|儿童|歪歪|咪咕|美食|埋堆|虎牙|观影|测试|直播|经典小品|MTV|女团|春晚|中国之声|车载|影视|斗鱼|^数字|纪录片频道|歌|DJ音乐|收音广播|YYY频道|电影频道.|国内影院|游戏频道/) {  # 匹配多个分类名
-                skip = 1
-            } else {
-                skip = 0
-                print
-            }
-            next
-        } 
-        !skip { print }
         ' tvboxlist/iptvFormatOutput.txt > tvboxlist/iptvFormatOutput2.txt
+        
         grep -v -e '#genre#' -e '广播' -e '春晚' tvboxlist/iptvFormatOutput2.txt > tvboxlist/iptvFormatOutput3.txt
         awk -F',' 'BEGIN{IGNORECASE=1} $1 !~ /DJ|YY|Radio/ {print}' tvboxlist/iptvFormatOutput3.txt > tvboxlist/iptvFormatOutput4.txt
         awk -F',' '{split($2, links, "#"); for (i in links) print $1 "," links[i]}' tvboxlist/iptvFormatOutput4.txt > tvboxlist/iptvFormatOutput5.txt
