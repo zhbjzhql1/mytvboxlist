@@ -23,7 +23,7 @@ https://m3u.ibert.me/txt/ycl_iptv.txt
 http://home.jundie.top:81/Cat/tv/live.txt
 http://www.meowtv.top/mtvzb.txt
 https://yyrj.fun/tv
-https://raw.githubusercontent.com/mygoww/xoxo/main/zb/测试.txt
+https://raw.githubusercontent.com/mygoww/xoxo/main/zb/%E6%B5%8B%E8%AF%95.txt
 https://raw.githubusercontent.com/MemoryCollection/IPTV/main/hotel.txt
 https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1715581924111/live1.txt
 https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1715581924675/live2.txt
