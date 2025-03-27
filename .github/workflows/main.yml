@@ -45,7 +45,7 @@ jobs:
         set +e
         set -x  # 开启执行跟踪
 
-        rm -f tvboxlist/*.json
+        # rm -f tvboxlist/*.json
         # 遍历 tvboxlist.txt 文件中的每一行
         while IFS=, read -r url_name url && url=$(echo "$url" | tr -d '\r'); do
           # 去除 url 变量中的回车符（如果有的话）
