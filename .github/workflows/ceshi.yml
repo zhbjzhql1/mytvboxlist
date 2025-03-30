@@ -49,6 +49,41 @@ jobs:
         # 初始重试延迟（秒）
         RETRY_DELAY=3
 
+        # 定义M3U转换函数
+        convert_m3u_to_txt() {
+          local m3u_content="$1"
+          local output_content=""
+          local current_group_title=""
+
+          # 按行处理M3U内容
+          while IFS= read -r line; do
+            line=$(echo "$line" | xargs) # 去除首尾空格
+
+            if [[ "$line" == "#EXTINF:"* ]]; then
+              # 提取 group-title
+              if [[ "$line" =~ group-title=\"([^\"]*)\" ]]; then
+                group_title="${BASH_REMATCH[1]}"
+                if [ "$group_title" != "$current_group_title" ]; then
+                  current_group_title="$group_title"
+                  output_content+="$current_group_title,#genre#\n"
+                fi
+              fi
+
+              # 提取频道名称
+              if [[ "$line" == *","* ]]; then
+                name=$(echo "$line" | cut -d',' -f2 | xargs)
+              fi
+            elif [[ "$line" =~ ^http.* ]]; then
+              # 如果是URL行，写入频道名称和URL
+              url="$line"
+              output_content+="$name,$url\n"
+            fi
+          done <<< "$m3u_content"
+
+          # 返回转换后的内容
+          echo -e "$output_content"
+        }
+
         while IFS= read -r url; do
           # 去除可能存在的Windows换行符
           url=$(echo "$url" | tr -d '\r')
@@ -77,7 +112,14 @@ jobs:
               fi
             else
               # 成功获取有效内容
-              echo "$body" >> tvboxlist/iptv.txt
+              if [[ "$body" == "#EXTM3U"* ]]; then
+                # 如果是M3U格式，调用转换函数
+                converted_content=$(convert_m3u_to_txt "$body")
+                echo "$converted_content" >> tvboxlist/iptv.txt
+              else
+                # 如果不是M3U格式，直接写入
+                echo "$body" >> tvboxlist/iptv.txt
+              fi
               echo >> tvboxlist/iptv.txt
               success=true
               break
