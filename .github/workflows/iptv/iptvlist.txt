@@ -3,7 +3,6 @@ http://home.jundie.top:81/Cat/tv/live.txt
 http://www.meowtv.top/mtvzb.txt
 http://150.158.112.123/live.txt
 https://6296.kstore.vip/25.txt
-https://raw.githubusercontent.com/yoursmile66/TVBox/main/live.txt
 https://raw.githubusercontent.com/YueChan/Live/main/Global.m3u
 https://raw.githubusercontent.com/YueChan/Live/main/Hunan.txt
 https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u
@@ -14,6 +13,7 @@ https://raw.githubusercontent.com/big-mouth-cn/tv/main/iptv-ok.m3u
 https://raw.githubusercontent.com/dxawi/0/main/tvlive.txt
 https://raw.githubusercontent.com/Ftindy/IPTV-URL/main/IPV6.m3u
 https://raw.githubusercontent.com/gaotianliuyun/gao/master/list.txt
+https://raw.githubusercontent.com/yoursmile66/TVBox/main/live.txt
 https://raw.githubusercontent.com/hjdhnx/hipy-sniffer/refs/heads/main/static/lives/lives.txt
 https://raw.githubusercontent.com/leevi0709/one/main/lib/live.txt
 https://raw.githubusercontent.com/TianmuTNT/iptv/main/iptv.txt
@@ -24,4 +24,3 @@ https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1716213
 https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1736923192652/boboji.m3u
 https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1742130501942/bjtv.txt
 https://gitlab.com/duomv/dzhipy/-/raw/main/lives/杭州华数.m3u
-https://gitlab.com/duomv/dzhipy/-/raw/main/lives/华数2.m3u

@@ -57,7 +57,8 @@ jobs:
 
           # 按行处理M3U内容
           while IFS= read -r line; do
-            line=$(echo "$line" | xargs) # 去除首尾空格
+            line="${line#"${line%%[![:space:]]*}"}"  # 去除行首空格
+            line="${line%"${line##*[![:space:]]}"}"  # 去除行尾空格
 
             if [[ "$line" == "#EXTINF:"* ]]; then
               # 提取 group-title
@@ -69,11 +70,11 @@ jobs:
                 fi
               fi
 
-              # 提取频道名称
-              if [[ "$line" == *","* ]]; then
-                name=$(echo "$line" | cut -d',' -f2 | xargs)
-              fi
-            elif [[ "$line" =~ ^http.* ]]; then
+              # 提取频道名称（直接使用内置字符串操作）
+              name="${line##*,}"  # 获取最后一个逗号后的内容
+              name="${name#"${name%%[![:space:]]*}"}"  # 去除行首空格
+              name="${name%"${name##*[![:space:]]}"}"  # 去除行尾空格
+            elif [[ "$line" =~ ^[a-zA-z]+://[^\s]* ]]; then
               # 如果是URL行，写入频道名称和URL
               url="$line"
               output_content+="$name,$url\n"
